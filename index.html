@@ -3,70 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyDocuBox</title>
+<title>MyDocuBox – Dein sicherer Dokumenten-Tresor</title>
 
 <style>
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    background:#f8f8f8;
-    margin:0;
-    padding:40px;
-    text-align:center;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0a1f44;
+    color: white;
 }
 
-.container{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+header {
+    padding: 20px;
+    text-align: center;
 }
 
-h1{
-    margin-top:0;
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4da3ff;
+    font-weight: 500;
 }
 
-a{
-    display:block;
-    margin:12px 0;
-    text-decoration:none;
-    color:#0066cc;
-    font-weight:500;
+.hero {
+    text-align: center;
+    padding: 90px 20px 70px 20px;
 }
 
-a:hover{
-    text-decoration:underline;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
-.footer{
-    margin-top:30px;
-    color:#777;
-    font-size:14px;
+.hero p {
+    color: #cbd6f0;
+    font-size: 18px;
+}
+
+.small-note {
+    color: #9fb7ff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #007bff;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.card {
+    background: #132b57;
+    padding: 35px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #8ea4d6;
+    font-size: 14px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<header>
+<nav>
+<a href="#features">Funktionen</a>
+<a href="#security">Sicherheit</a>
+<a href="#support">Support</a>
+<a href="Datenschutz.html">Datenschutz</a>
+</nav>
+</header>
 
+<section class="hero">
 <h1>MyDocuBox</h1>
-
 <p>
-MyDocuBox ist eine App zur sicheren Verwaltung persönlicher Dokumente.
+Organisiere, sichere und finde deine Dokumente in Sekunden –  
+100% privat. 100% unter deiner Kontrolle.
 </p>
 
-<h3>Rechtliche Informationen</h3>
-
-<a href="datenschutz.html">Datenschutzerklärung</a>
-
-<p class="footer">
-Support: support@mydocubox.app
+<p class="small-note">
+Keine Datensammlung. Kein Tracking. Kein Profiling.
 </p>
+
+<a class="button" href="https://apps.apple.com/app/idDEINE_APP_ID" target="_blank">
+Jetzt im App Store herunterladen
+</a>
+
+<p class="small-note">
+Kostenlos testen – Upgrade jederzeit möglich.
+</p>
+</section>
+
+<section id="features" class="section">
+
+<div class="card">
+<h2>🧠 Intelligente Offline-Erkennung</h2>
+<p>
+Beim Scannen erkennt MyDocuBox automatisch relevante Inhalte
+und schlägt passende Dateinamen sowie Kategorien vor.
+</p>
+<p>
+Die Analyse erfolgt vollständig offline – deine Dokumente verlassen dein Gerät nicht.
+</p>
+</div>
+
+<div class="card">
+<h2>⚡ Schnelle OCR-Suche</h2>
+<p>
+Finde Rechnungen, Verträge oder wichtige Schreiben in Sekunden –
+selbst wenn du nur ein Stichwort kennst.
+</p>
+</div>
+
+<div class="card">
+<h2>🔔 Erinnerungen direkt im Dokument</h2>
+<p>
+Speichere Zahlungsfristen oder Termine direkt im Dokument.
+MyDocuBox erinnert dich rechtzeitig.
+</p>
+</div>
+
+</section>
+
+<section id="security" class="section">
+
+<div class="card">
+<h2>🔒 Lokal First – Deine Daten gehören nur dir</h2>
+<p>
+Alle Dokumente werden ausschließlich lokal gespeichert.
+Die App funktioniert vollständig offline – jederzeit.
+</p>
+<p>
+Keine Server-Abhängigkeit. Keine externe Analyse.
+</p>
+</div>
+
+<div class="card">
+<h2>☁️ Automatische iCloud-Synchronisierung</h2>
+<p>
+Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien
+automatisch über deinen persönlichen iCloud-Speicher synchronisiert.
+</p>
+<p>
+Die Daten bleiben innerhalb deines Apple-Ökosystems.
+Wir haben keinen Zugriff auf deine Inhalte.
+</p>
+</div>
+
+<div class="card">
+<h2>🛡 Biometrische App-Sperre</h2>
+<p>
+Schütze deine Dokumente zusätzlich mit Face ID oder Touch ID.
+Optional aktivierbar – ohne biometrische Authentifizierung lässt sich die App nicht öffnen.
+</p>
+</div>
+
+<div class="card">
+<h2>Warum MyDocuBox anders ist</h2>
+<ul>
+<li>✔ Lokal First Architektur</li>
+<li>✔ Vollständig offline nutzbar</li>
+<li>✔ Biometrisch geschützt</li>
+<li>✔ Intelligente Vorschläge ohne Cloud</li>
+<li>✔ Keine Werbung</li>
+<li>✔ Keine Datensammlung</li>
+</ul>
+</div>
+
+</section>
+
+<section id="support" class="section">
+
+<div class="card">
+<h2>Support kontaktieren</h2>
+<p>Antwortzeit: 24–48 Stunden</p>
+
+<form action="https://formspree.io/f/DEIN_FORM_ID" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>E-Mail</label>
+<input type="email" name="email" required>
+
+<label>Nachricht</label>
+<textarea name="message" rows="5" required></textarea>
+
+<button type="submit">Nachricht senden</button>
+
+</form>
 
 </div>
+
+</section>
+
+<footer>
+© 2026 MyDocuBox – support@mydocubox.app
+
+<a href="Datenschutz.html">Datenschutzerklärung</a>
+</footer>
 
 </body>
 </html>
