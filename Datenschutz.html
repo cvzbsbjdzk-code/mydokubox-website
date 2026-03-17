@@ -4,284 +4,737 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutzerklärung – MyDocuBox</title>
+
+  <meta name="description" content="Datenschutzerklärung von MyDocuBox – lokale Speicherung, optionale iCloud-Synchronisierung, kein Tracking, keine Werbung.">
+  <meta property="og:title" content="Datenschutzerklärung – MyDocuBox">
+  <meta property="og:description" content="Erfahre, wie MyDocuBox deine Daten lokal speichert, optional über iCloud synchronisiert und auf Tracking verzichtet.">
+  <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
+  <meta property="og:url" content="https://mydocubox.app/Datenschutz.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
+  <link rel="apple-touch-icon" href="/mydocubox32.png">
+
+  <link rel="alternate" hreflang="de" href="https://mydocubox.app/Datenschutz.html">
+  <link rel="alternate" hreflang="en" href="https://mydocubox.app/Datenschutz.html?lang=en">
+
   <style>
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.7;
-      max-width: 900px;
+      background: #0a1f44;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4da3ff;
+      font-weight: 500;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 12px;
+    }
+
+    .lang-switch button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lang-switch button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
+
+    .container {
+      max-width: 950px;
       margin: 0 auto;
-      padding: 40px 20px;
-      color: #222;
-      background: #fff;
+      padding: 20px 20px 70px 20px;
     }
 
-    h1, h2, h3 {
-      color: #111;
+    .hero {
+      text-align: center;
+      padding: 10px 0 35px 0;
     }
 
-    h1 {
-      margin-bottom: 10px;
-      font-size: 2rem;
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
     }
 
-    h2 {
-      margin-top: 32px;
-      font-size: 1.35rem;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 6px;
+    .meta {
+      color: #9fb7ff;
+      margin-bottom: 0;
+      font-size: 14px;
     }
 
-    h3 {
+    .card {
+      background: linear-gradient(145deg, #ffd84d, #ffcc00);
+      color: #0a1f44;
+      padding: 35px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .card h2,
+    .card h3,
+    .card p,
+    .card li,
+    .card strong,
+    .card code {
+      color: #0a1f44;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+      border-bottom: 1px solid rgba(10, 31, 68, 0.15);
+      padding-bottom: 8px;
+    }
+
+    .card h3 {
       margin-top: 24px;
       font-size: 1.1rem;
     }
 
-    p {
+    .card p {
       margin: 12px 0;
     }
 
-    ul {
+    .card ul {
       margin: 10px 0 16px 22px;
     }
 
-    li {
+    .card li {
       margin-bottom: 6px;
     }
 
-    .meta {
-      color: #666;
-      margin-bottom: 24px;
-    }
-
     .summary {
-      margin-top: 36px;
+      margin-top: 10px;
       padding: 18px 20px;
-      background: #f7f7f7;
-      border-left: 4px solid #444;
+      background: rgba(10, 31, 68, 0.08);
+      border-left: 4px solid #0a1f44;
       border-radius: 8px;
     }
 
     code {
-      background: #f3f3f3;
+      background: rgba(10, 31, 68, 0.08);
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 0.95em;
     }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 50px 20px;
+      color: #8ea4d6;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .support-mail:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>Datenschutzerklärung</h1>
-  <p class="meta">Stand: 15.03.2026</p>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Startseite</a>
+      <a href="Datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
 
-  <h2>1. Grundsatz</h2>
-  <p>
-    <strong>MyDocuBox</strong> ist eine App zur strukturierten Verwaltung persönlicher Dokumente
-    mit lokaler Speicherung und optionaler iCloud-Synchronisation.
-  </p>
-  <p>
-    Diese Datenschutzerklärung gilt für die Nutzung der mobilen Anwendung MyDocuBox auf Apple-Plattformen.
-  </p>
-  <p>Grundprinzipien der App:</p>
-  <ul>
-    <li>Kein Benutzerkonto erforderlich</li>
-    <li>Keine eigenen Server des Entwicklers</li>
-    <li>Lokale Speicherung als Standard</li>
-    <li>Optionale Synchronisation über Ihren persönlichen iCloud-Speicher</li>
-  </ul>
+      <div class="lang-switch">
+        <button id="btn-de" onclick="setLang('de')">DE</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </header>
 
-  <h2>2. Verantwortlicher</h2>
-  <p>
-    MyDocuBox<br />
-    Indie-App / Einzelentwickler<br />
-    E-Mail: support@mydocubox.app
-  </p>
+  <div class="container">
+    <section class="hero">
+      <h1 data-i18n="page_heading">Datenschutzerklärung</h1>
+      <p class="meta" data-i18n="meta_date">Stand: 15.03.2026</p>
+    </section>
 
-  <h2>3. Welche Daten verarbeitet die App?</h2>
-  <p>
-    Die App verarbeitet ausschließlich Daten, die Sie selbst in die App importieren,
-    dort erstellen oder durch Nutzung der Funktionen auslösen.
-  </p>
-  <p>Dazu gehören insbesondere:</p>
-  <ul>
-    <li>importierte Dokumente (z. B. PDF, JPG, PNG, DOC/DOCX, TXT)</li>
-    <li>Metadaten wie Dateiname, Kategorie, Datum, UUID oder Änderungszeitpunkt</li>
-    <li>erkannte Texte aus OCR/Text-Extraktion</li>
-    <li>technische Synchronisationsinformationen (z. B. <code>sync_state</code>, Löschmarkierungen)</li>
-    <li>Erinnerungszeitpunkte für Dokumente, falls Sie Erinnerungen nutzen</li>
-    <li>lokale App-Einstellungen, z. B. zur App-Sperre</li>
-    <li>lokale technische Informationen zum Pro-Zugangsstatus</li>
-  </ul>
-  <p>
-    Der Entwickler erhebt keine Dokumentinhalte über eigene Server.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s1_title">1. Grundsatz</h2>
+      <p data-i18n="s1_p1">
+        <strong>MyDocuBox</strong> ist eine App zur strukturierten Verwaltung persönlicher Dokumente
+        mit lokaler Speicherung und optionaler iCloud-Synchronisation.
+      </p>
+      <p data-i18n="s1_p2">
+        Diese Datenschutzerklärung gilt für die Nutzung der mobilen Anwendung MyDocuBox auf Apple-Plattformen.
+      </p>
+      <p data-i18n="s1_p3">Grundprinzipien der App:</p>
+      <ul>
+        <li data-i18n="s1_l1">Kein Benutzerkonto erforderlich</li>
+        <li data-i18n="s1_l2">Keine eigenen Server des Entwicklers</li>
+        <li data-i18n="s1_l3">Lokale Speicherung als Standard</li>
+        <li data-i18n="s1_l4">Optionale Synchronisation über Ihren persönlichen iCloud-Speicher</li>
+      </ul>
+    </div>
 
-  <h2>4. Speicherort der Daten</h2>
+    <div class="card">
+      <h2 data-i18n="s2_title">2. Verantwortlicher</h2>
+      <p>
+        <span data-i18n="s2_line1">MyDocuBox</span><br />
+        <span data-i18n="s2_line2">Indie-App / Einzelentwickler</span><br />
+        <span data-i18n="s2_line3">E-Mail:</span>
+        <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+      </p>
+    </div>
 
-  <h3>Lokal auf Ihrem Gerät</h3>
-  <p>
-    Dokumente und zugehörige Daten werden standardmäßig lokal auf Ihrem Gerät gespeichert.
-  </p>
-  <p>Die App verwendet dafür:</p>
-  <ul>
-    <li>Dateispeicher innerhalb der App-Sandbox</li>
-    <li>eine lokale Datenbank</li>
-    <li>lokale Konfigurationsdateien für Einstellungen und App-Funktionen</li>
-  </ul>
+    <div class="card">
+      <h2 data-i18n="s3_title">3. Welche Daten verarbeitet die App?</h2>
+      <p data-i18n="s3_p1">
+        Die App verarbeitet ausschließlich Daten, die Sie selbst in die App importieren,
+        dort erstellen oder durch Nutzung der Funktionen auslösen.
+      </p>
+      <p data-i18n="s3_p2">Dazu gehören insbesondere:</p>
+      <ul>
+        <li data-i18n="s3_l1">importierte Dokumente (z. B. PDF, JPG, PNG, DOC/DOCX, TXT)</li>
+        <li data-i18n="s3_l2">Metadaten wie Dateiname, Kategorie, Datum, UUID oder Änderungszeitpunkt</li>
+        <li data-i18n="s3_l3">erkannte Texte aus OCR/Text-Extraktion</li>
+        <li data-i18n="s3_l4">technische Synchronisationsinformationen (z. B. <code>sync_state</code>, Löschmarkierungen)</li>
+        <li data-i18n="s3_l5">Erinnerungszeitpunkte für Dokumente, falls Sie Erinnerungen nutzen</li>
+        <li data-i18n="s3_l6">lokale App-Einstellungen, z. B. zur App-Sperre</li>
+        <li data-i18n="s3_l7">lokale technische Informationen zum Pro-Zugangsstatus</li>
+      </ul>
+      <p data-i18n="s3_p3">
+        Der Entwickler erhebt keine Dokumentinhalte über eigene Server.
+      </p>
+    </div>
 
-  <h3>Optional in iCloud</h3>
-  <p>
-    Wenn Sie iCloud für MyDocuBox aktivieren, können Dokumente und zugehörige
-    Synchronisationsdaten zusätzlich über Ihren persönlichen iCloud-Speicher
-    zwischen Ihren Apple-Geräten synchronisiert werden.
-  </p>
-  <p>Dabei gilt:</p>
-  <ul>
-    <li>Die Daten werden über Apple-Infrastruktur übertragen</li>
-    <li>Der Entwickler betreibt keine eigenen Server für Dokumentspeicherung oder Sync</li>
-    <li>Der Entwickler hat keinen direkten Zugriff auf Ihre Dokumente</li>
-    <li>Die Verarbeitung erfolgt innerhalb Ihrer Apple-iCloud-Umgebung</li>
-  </ul>
-  <p>
-    Hinweis: Erinnerungszeitpunkte bleiben lokal auf dem jeweiligen Gerät und werden
-    nicht über iCloud synchronisiert.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s4_title">4. Speicherort der Daten</h2>
 
-  <h2>5. Synchronisation</h2>
-  <p>
-    Die Synchronisation kann manuell gestartet werden und läuft zusätzlich automatisch,
-    wenn die App aktiv ist.
-  </p>
-  <p>Dabei gilt:</p>
-  <ul>
-    <li>bei fehlender Verbindung bleiben Änderungen lokal gespeichert</li>
-    <li>Änderungen werden synchronisiert, sobald wieder eine Verbindung besteht</li>
-    <li>Konflikte werden technisch anhand des Änderungszeitpunkts aufgelöst</li>
-    <li>Löschungen werden über technische Löschmarkierungen zwischen Geräten übertragen</li>
-  </ul>
+      <h3 data-i18n="s4_h3_1">Lokal auf Ihrem Gerät</h3>
+      <p data-i18n="s4_p1">
+        Dokumente und zugehörige Daten werden standardmäßig lokal auf Ihrem Gerät gespeichert.
+      </p>
+      <p data-i18n="s4_p2">Die App verwendet dafür:</p>
+      <ul>
+        <li data-i18n="s4_l1">Dateispeicher innerhalb der App-Sandbox</li>
+        <li data-i18n="s4_l2">eine lokale Datenbank</li>
+        <li data-i18n="s4_l3">lokale Konfigurationsdateien für Einstellungen und App-Funktionen</li>
+      </ul>
 
-  <h2>6. Import und Öffnen über andere Apps</h2>
-  <p>
-    Wenn Sie Dateien über „Teilen mit MyDocuBox“ importieren, werden diese zunächst
-    temporär im App-Group-Bereich verarbeitet und anschließend in die App übernommen.
-  </p>
-  <p>
-    Beim Bearbeiten von Dokumenten über iOS-Systemfunktionen wie Vorschau oder Markup
-    werden Änderungen wieder in die lokale Originaldatei übernommen und danach bei Bedarf synchronisiert.
-  </p>
+      <h3 data-i18n="s4_h3_2">Optional in iCloud</h3>
+      <p data-i18n="s4_p3">
+        Wenn Sie iCloud für MyDocuBox aktivieren, können Dokumente und zugehörige
+        Synchronisationsdaten zusätzlich über Ihren persönlichen iCloud-Speicher
+        zwischen Ihren Apple-Geräten synchronisiert werden.
+      </p>
+      <p data-i18n="s4_p4">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s4_l4">Die Daten werden über Apple-Infrastruktur übertragen</li>
+        <li data-i18n="s4_l5">Der Entwickler betreibt keine eigenen Server für Dokumentspeicherung oder Sync</li>
+        <li data-i18n="s4_l6">Der Entwickler hat keinen direkten Zugriff auf Ihre Dokumente</li>
+        <li data-i18n="s4_l7">Die Verarbeitung erfolgt innerhalb Ihrer Apple-iCloud-Umgebung</li>
+      </ul>
+      <p data-i18n="s4_p5">
+        Hinweis: Erinnerungszeitpunkte bleiben lokal auf dem jeweiligen Gerät und werden
+        nicht über iCloud synchronisiert.
+      </p>
+    </div>
 
-  <h2>7. OCR und Textverarbeitung</h2>
-  <p>
-    Die OCR- und Text-Extraktionsfunktionen dienen ausschließlich dazu:
-  </p>
-  <ul>
-    <li>Dokumente besser durchsuchbar zu machen</li>
-    <li>eine Vorschau erkannter Texte bereitzustellen</li>
-  </ul>
-  <p>
-    Die Verarbeitung erfolgt lokal auf dem Gerät.
-    Es werden keine Dokumentinhalte an den Entwickler übertragen.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s5_title">5. Synchronisation</h2>
+      <p data-i18n="s5_p1">
+        Die Synchronisation kann manuell gestartet werden und läuft zusätzlich automatisch,
+        wenn die App aktiv ist.
+      </p>
+      <p data-i18n="s5_p2">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s5_l1">bei fehlender Verbindung bleiben Änderungen lokal gespeichert</li>
+        <li data-i18n="s5_l2">Änderungen werden synchronisiert, sobald wieder eine Verbindung besteht</li>
+        <li data-i18n="s5_l3">Konflikte werden technisch anhand des Änderungszeitpunkts aufgelöst</li>
+        <li data-i18n="s5_l4">Löschungen werden über technische Löschmarkierungen zwischen Geräten übertragen</li>
+      </ul>
+    </div>
 
-  <h2>8. App-Schutz und Biometrie</h2>
-  <p>
-    Wenn Sie den optionalen App-Schutz aktivieren, kann MyDocuBox Systemfunktionen wie
-    Face ID, Touch ID oder andere verfügbare biometrische Verfahren zur Entsperrung verwenden.
-  </p>
-  <p>Dabei gilt:</p>
-  <ul>
-    <li>die biometrische Prüfung erfolgt ausschließlich über das Betriebssystem</li>
-    <li>die App speichert keine biometrischen Rohdaten</li>
-    <li>lokal gespeichert wird nur, ob der App-Schutz aktiviert ist</li>
-  </ul>
+    <div class="card">
+      <h2 data-i18n="s6_title">6. Import und Öffnen über andere Apps</h2>
+      <p data-i18n="s6_p1">
+        Wenn Sie Dateien über „Teilen mit MyDocuBox“ importieren, werden diese zunächst
+        temporär im App-Group-Bereich verarbeitet und anschließend in die App übernommen.
+      </p>
+      <p data-i18n="s6_p2">
+        Beim Bearbeiten von Dokumenten über iOS-Systemfunktionen wie Vorschau oder Markup
+        werden Änderungen wieder in die lokale Originaldatei übernommen und danach bei Bedarf synchronisiert.
+      </p>
+    </div>
 
-  <h2>9. Pro-Version und In-App-Käufe</h2>
-  <p>
-    MyDocuBox kann kostenpflichtige Pro-Funktionen über In-App-Käufe oder Abonnements des App Store anbieten.
-  </p>
-  <p>Dabei gilt:</p>
-  <ul>
-    <li>Kaufabwicklung, Abrechnung und Zahlungsdaten werden von Apple verarbeitet</li>
-    <li>der Entwickler erhält keine vollständigen Zahlungsdaten</li>
-    <li>
-      die App speichert lokal nur technische Informationen zum Zugangsstatus,
-      damit Pro-Funktionen auf dem Gerät korrekt freigeschaltet werden
-    </li>
-  </ul>
-  <p>
-    Für Käufe und Abonnements gelten ergänzend die Datenschutz- und Nutzungsbedingungen von Apple.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s7_title">7. OCR und Textverarbeitung</h2>
+      <p data-i18n="s7_p1">
+        Die OCR- und Text-Extraktionsfunktionen dienen ausschließlich dazu:
+      </p>
+      <ul>
+        <li data-i18n="s7_l1">Dokumente besser durchsuchbar zu machen</li>
+        <li data-i18n="s7_l2">eine Vorschau erkannter Texte bereitzustellen</li>
+      </ul>
+      <p data-i18n="s7_p2">
+        Die Verarbeitung erfolgt lokal auf dem Gerät.
+        Es werden keine Dokumentinhalte an den Entwickler übertragen.
+      </p>
+    </div>
 
-  <h2>10. Berechtigungen</h2>
-  <p>
-    Je nach Plattform und verwendeter Funktion kann die App folgende Systemberechtigungen anfordern oder verwenden:
-  </p>
-  <ul>
-    <li>Kamera (zum Scannen von Dokumenten)</li>
-    <li>Zugriff auf Dateien oder Fotos (Import / Export)</li>
-    <li>Mitteilungen / Benachrichtigungen (für Dokument-Erinnerungen)</li>
-    <li>Biometrie / Face ID (für den optionalen App-Schutz)</li>
-    <li>Netzwerkzugriff (für optionale iCloud-Synchronisation sowie App-Store-Kaufprüfung)</li>
-  </ul>
-  <p>
-    Hinweis: Einzelne Berechtigungen können technisch auch bereits beim App-Start
-    oder beim Vorbereiten einer Funktion angefragt werden.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s8_title">8. App-Schutz und Biometrie</h2>
+      <p data-i18n="s8_p1">
+        Wenn Sie den optionalen App-Schutz aktivieren, kann MyDocuBox Systemfunktionen wie
+        Face ID, Touch ID oder andere verfügbare biometrische Verfahren zur Entsperrung verwenden.
+      </p>
+      <p data-i18n="s8_p2">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s8_l1">die biometrische Prüfung erfolgt ausschließlich über das Betriebssystem</li>
+        <li data-i18n="s8_l2">die App speichert keine biometrischen Rohdaten</li>
+        <li data-i18n="s8_l3">lokal gespeichert wird nur, ob der App-Schutz aktiviert ist</li>
+      </ul>
+    </div>
 
-  <h2>11. Export und Weitergabe</h2>
-  <p>
-    Dokumente können von Ihnen exportiert, geteilt oder gedruckt werden.
-    Die Weitergabe erfolgt ausschließlich auf Ihre ausdrückliche Aktion.
-  </p>
-  <p>
-    Wenn Sie Dokumente an externe Dienste wie E-Mail- oder Cloud-Anbieter übergeben,
-    gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s9_title">9. Pro-Version und In-App-Käufe</h2>
+      <p data-i18n="s9_p1">
+        MyDocuBox kann kostenpflichtige Pro-Funktionen über In-App-Käufe oder Abonnements des App Store anbieten.
+      </p>
+      <p data-i18n="s9_p2">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s9_l1">Kaufabwicklung, Abrechnung und Zahlungsdaten werden von Apple verarbeitet</li>
+        <li data-i18n="s9_l2">der Entwickler erhält keine vollständigen Zahlungsdaten</li>
+        <li data-i18n="s9_l3">
+          die App speichert lokal nur technische Informationen zum Zugangsstatus,
+          damit Pro-Funktionen auf dem Gerät korrekt freigeschaltet werden
+        </li>
+      </ul>
+      <p data-i18n="s9_p3">
+        Für Käufe und Abonnements gelten ergänzend die Datenschutz- und Nutzungsbedingungen von Apple.
+      </p>
+    </div>
 
-  <h2>12. Löschung und Aufbewahrung</h2>
-  <p>
-    Sie können Dokumente jederzeit innerhalb der App löschen.
-  </p>
-  <p>
-    Bei aktivierter Synchronisation werden Löschungen auf Ihre anderen Geräte übertragen.
-    Technische Löschmarkierungen können vorübergehend gespeichert bleiben und werden anschließend bereinigt.
-  </p>
-  <p>
-    Wenn Sie die App deinstallieren, werden lokale Daten auf dem jeweiligen Gerät entfernt.
-    iCloud-Daten unterliegen zusätzlich Ihren persönlichen iCloud-Einstellungen.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s10_title">10. Berechtigungen</h2>
+      <p data-i18n="s10_p1">
+        Je nach Plattform und verwendeter Funktion kann die App folgende Systemberechtigungen anfordern oder verwenden:
+      </p>
+      <ul>
+        <li data-i18n="s10_l1">Kamera (zum Scannen von Dokumenten)</li>
+        <li data-i18n="s10_l2">Zugriff auf Dateien oder Fotos (Import / Export)</li>
+        <li data-i18n="s10_l3">Mitteilungen / Benachrichtigungen (für Dokument-Erinnerungen)</li>
+        <li data-i18n="s10_l4">Biometrie / Face ID (für den optionalen App-Schutz)</li>
+        <li data-i18n="s10_l5">Netzwerkzugriff (für optionale iCloud-Synchronisation sowie App-Store-Kaufprüfung)</li>
+      </ul>
+      <p data-i18n="s10_p2">
+        Hinweis: Einzelne Berechtigungen können technisch auch bereits beim App-Start
+        oder beim Vorbereiten einer Funktion angefragt werden.
+      </p>
+    </div>
 
-  <h2>13. Keine Werbung und kein Tracking</h2>
-  <p>MyDocuBox verwendet:</p>
-  <ul>
-    <li>keine Werbenetzwerke</li>
-    <li>kein Nutzer-Tracking</li>
-    <li>kein Profiling</li>
-    <li>keine Analyse-SDKs</li>
-  </ul>
+    <div class="card">
+      <h2 data-i18n="s11_title">11. Export und Weitergabe</h2>
+      <p data-i18n="s11_p1">
+        Dokumente können von Ihnen exportiert, geteilt oder gedruckt werden.
+        Die Weitergabe erfolgt ausschließlich auf Ihre ausdrückliche Aktion.
+      </p>
+      <p data-i18n="s11_p2">
+        Wenn Sie Dokumente an externe Dienste wie E-Mail- oder Cloud-Anbieter übergeben,
+        gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+      </p>
+    </div>
 
-  <h2>14. Änderungen dieser Datenschutzerklärung</h2>
-  <p>
-    Diese Datenschutzerklärung kann bei zukünftigen Versionen der App angepasst werden.
-    Die jeweils aktuelle Version ist in der App einsehbar.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s12_title">12. Löschung und Aufbewahrung</h2>
+      <p data-i18n="s12_p1">
+        Sie können Dokumente jederzeit innerhalb der App löschen.
+      </p>
+      <p data-i18n="s12_p2">
+        Bei aktivierter Synchronisation werden Löschungen auf Ihre anderen Geräte übertragen.
+        Technische Löschmarkierungen können vorübergehend gespeichert bleiben und werden anschließend bereinigt.
+      </p>
+      <p data-i18n="s12_p3">
+        Wenn Sie die App deinstallieren, werden lokale Daten auf dem jeweiligen Gerät entfernt.
+        iCloud-Daten unterliegen zusätzlich Ihren persönlichen iCloud-Einstellungen.
+      </p>
+    </div>
 
-  <h2>15. Ihre Rechte</h2>
-  <p>
-    Soweit personenbezogene Daten verarbeitet werden, gelten die Rechte gemäß der
-    Datenschutz-Grundverordnung (DSGVO).
-  </p>
-  <p>
-    Da MyDocuBox keine zentralen Benutzerkonten oder Server des Entwicklers verwendet,
-    verbleiben die meisten Daten ausschließlich auf Ihrem Gerät oder in Ihrem persönlichen iCloud-Speicher.
-  </p>
+    <div class="card">
+      <h2 data-i18n="s13_title">13. Keine Werbung und kein Tracking</h2>
+      <p data-i18n="s13_p1">MyDocuBox verwendet:</p>
+      <ul>
+        <li data-i18n="s13_l1">keine Werbenetzwerke</li>
+        <li data-i18n="s13_l2">kein Nutzer-Tracking</li>
+        <li data-i18n="s13_l3">kein Profiling</li>
+        <li data-i18n="s13_l4">keine Analyse-SDKs</li>
+      </ul>
+    </div>
 
-  <div class="summary">
-    <p><strong>Kurzfassung:</strong></p>
-    <p>Ihre Dokumente bleiben unter Ihrer Kontrolle.</p>
-    <p>Standardmäßig werden Daten lokal gespeichert.</p>
-    <p>
-      Optional können Dokumente über Ihren eigenen iCloud-Speicher zwischen Ihren Geräten synchronisiert werden.
-    </p>
+    <div class="card">
+      <h2 data-i18n="s14_title">14. Änderungen dieser Datenschutzerklärung</h2>
+      <p data-i18n="s14_p1">
+        Diese Datenschutzerklärung kann bei zukünftigen Versionen der App angepasst werden.
+        Die jeweils aktuelle Version ist in der App einsehbar.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s15_title">15. Ihre Rechte</h2>
+      <p data-i18n="s15_p1">
+        Soweit personenbezogene Daten verarbeitet werden, gelten die Rechte gemäß der
+        Datenschutz-Grundverordnung (DSGVO).
+      </p>
+      <p data-i18n="s15_p2">
+        Da MyDocuBox keine zentralen Benutzerkonten oder Server des Entwicklers verwendet,
+        verbleiben die meisten Daten ausschließlich auf Ihrem Gerät oder in Ihrem persönlichen iCloud-Speicher.
+      </p>
+
+      <div class="summary">
+        <p><strong data-i18n="summary_title">Kurzfassung:</strong></p>
+        <p data-i18n="summary_p1">Ihre Dokumente bleiben unter Ihrer Kontrolle.</p>
+        <p data-i18n="summary_p2">Standardmäßig werden Daten lokal gespeichert.</p>
+        <p data-i18n="summary_p3">
+          Optional können Dokumente über Ihren eigenen iCloud-Speicher zwischen Ihren Geräten synchronisiert werden.
+        </p>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    © 2026 MyDocuBox –
+    <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+    <a href="Datenschutz.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+  </footer>
+
+  <script>
+    const translations = {
+      de: {
+        page_title: "Datenschutzerklärung – MyDocuBox",
+        meta_description: "Datenschutzerklärung von MyDocuBox – lokale Speicherung, optionale iCloud-Synchronisierung, kein Tracking, keine Werbung.",
+        og_title: "Datenschutzerklärung – MyDocuBox",
+        og_description: "Erfahre, wie MyDocuBox deine Daten lokal speichert, optional über iCloud synchronisiert und auf Tracking verzichtet.",
+
+        nav_home: "Startseite",
+        nav_privacy: "Datenschutz",
+        nav_imprint: "Impressum",
+
+        page_heading: "Datenschutzerklärung",
+        meta_date: "Stand: 15.03.2026",
+
+        s1_title: "1. Grundsatz",
+        s1_p1: "MyDocuBox ist eine App zur strukturierten Verwaltung persönlicher Dokumente mit lokaler Speicherung und optionaler iCloud-Synchronisation.",
+        s1_p2: "Diese Datenschutzerklärung gilt für die Nutzung der mobilen Anwendung MyDocuBox auf Apple-Plattformen.",
+        s1_p3: "Grundprinzipien der App:",
+        s1_l1: "Kein Benutzerkonto erforderlich",
+        s1_l2: "Keine eigenen Server des Entwicklers",
+        s1_l3: "Lokale Speicherung als Standard",
+        s1_l4: "Optionale Synchronisation über Ihren persönlichen iCloud-Speicher",
+
+        s2_title: "2. Verantwortlicher",
+        s2_line1: "MyDocuBox",
+        s2_line2: "Indie-App / Einzelentwickler",
+        s2_line3: "E-Mail:",
+
+        s3_title: "3. Welche Daten verarbeitet die App?",
+        s3_p1: "Die App verarbeitet ausschließlich Daten, die Sie selbst in die App importieren, dort erstellen oder durch Nutzung der Funktionen auslösen.",
+        s3_p2: "Dazu gehören insbesondere:",
+        s3_l1: "importierte Dokumente (z. B. PDF, JPG, PNG, DOC/DOCX, TXT)",
+        s3_l2: "Metadaten wie Dateiname, Kategorie, Datum, UUID oder Änderungszeitpunkt",
+        s3_l3: "erkannte Texte aus OCR/Text-Extraktion",
+        s3_l4: "technische Synchronisationsinformationen (z. B. sync_state, Löschmarkierungen)",
+        s3_l5: "Erinnerungszeitpunkte für Dokumente, falls Sie Erinnerungen nutzen",
+        s3_l6: "lokale App-Einstellungen, z. B. zur App-Sperre",
+        s3_l7: "lokale technische Informationen zum Pro-Zugangsstatus",
+        s3_p3: "Der Entwickler erhebt keine Dokumentinhalte über eigene Server.",
+
+        s4_title: "4. Speicherort der Daten",
+        s4_h3_1: "Lokal auf Ihrem Gerät",
+        s4_p1: "Dokumente und zugehörige Daten werden standardmäßig lokal auf Ihrem Gerät gespeichert.",
+        s4_p2: "Die App verwendet dafür:",
+        s4_l1: "Dateispeicher innerhalb der App-Sandbox",
+        s4_l2: "eine lokale Datenbank",
+        s4_l3: "lokale Konfigurationsdateien für Einstellungen und App-Funktionen",
+        s4_h3_2: "Optional in iCloud",
+        s4_p3: "Wenn Sie iCloud für MyDocuBox aktivieren, können Dokumente und zugehörige Synchronisationsdaten zusätzlich über Ihren persönlichen iCloud-Speicher zwischen Ihren Apple-Geräten synchronisiert werden.",
+        s4_p4: "Dabei gilt:",
+        s4_l4: "Die Daten werden über Apple-Infrastruktur übertragen",
+        s4_l5: "Der Entwickler betreibt keine eigenen Server für Dokumentspeicherung oder Sync",
+        s4_l6: "Der Entwickler hat keinen direkten Zugriff auf Ihre Dokumente",
+        s4_l7: "Die Verarbeitung erfolgt innerhalb Ihrer Apple-iCloud-Umgebung",
+        s4_p5: "Hinweis: Erinnerungszeitpunkte bleiben lokal auf dem jeweiligen Gerät und werden nicht über iCloud synchronisiert.",
+
+        s5_title: "5. Synchronisation",
+        s5_p1: "Die Synchronisation kann manuell gestartet werden und läuft zusätzlich automatisch, wenn die App aktiv ist.",
+        s5_p2: "Dabei gilt:",
+        s5_l1: "bei fehlender Verbindung bleiben Änderungen lokal gespeichert",
+        s5_l2: "Änderungen werden synchronisiert, sobald wieder eine Verbindung besteht",
+        s5_l3: "Konflikte werden technisch anhand des Änderungszeitpunkts aufgelöst",
+        s5_l4: "Löschungen werden über technische Löschmarkierungen zwischen Geräten übertragen",
+
+        s6_title: "6. Import und Öffnen über andere Apps",
+        s6_p1: "Wenn Sie Dateien über „Teilen mit MyDocuBox“ importieren, werden diese zunächst temporär im App-Group-Bereich verarbeitet und anschließend in die App übernommen.",
+        s6_p2: "Beim Bearbeiten von Dokumenten über iOS-Systemfunktionen wie Vorschau oder Markup werden Änderungen wieder in die lokale Originaldatei übernommen und danach bei Bedarf synchronisiert.",
+
+        s7_title: "7. OCR und Textverarbeitung",
+        s7_p1: "Die OCR- und Text-Extraktionsfunktionen dienen ausschließlich dazu:",
+        s7_l1: "Dokumente besser durchsuchbar zu machen",
+        s7_l2: "eine Vorschau erkannter Texte bereitzustellen",
+        s7_p2: "Die Verarbeitung erfolgt lokal auf dem Gerät. Es werden keine Dokumentinhalte an den Entwickler übertragen.",
+
+        s8_title: "8. App-Schutz und Biometrie",
+        s8_p1: "Wenn Sie den optionalen App-Schutz aktivieren, kann MyDocuBox Systemfunktionen wie Face ID, Touch ID oder andere verfügbare biometrische Verfahren zur Entsperrung verwenden.",
+        s8_p2: "Dabei gilt:",
+        s8_l1: "die biometrische Prüfung erfolgt ausschließlich über das Betriebssystem",
+        s8_l2: "die App speichert keine biometrischen Rohdaten",
+        s8_l3: "lokal gespeichert wird nur, ob der App-Schutz aktiviert ist",
+
+        s9_title: "9. Pro-Version und In-App-Käufe",
+        s9_p1: "MyDocuBox kann kostenpflichtige Pro-Funktionen über In-App-Käufe oder Abonnements des App Store anbieten.",
+        s9_p2: "Dabei gilt:",
+        s9_l1: "Kaufabwicklung, Abrechnung und Zahlungsdaten werden von Apple verarbeitet",
+        s9_l2: "der Entwickler erhält keine vollständigen Zahlungsdaten",
+        s9_l3: "die App speichert lokal nur technische Informationen zum Zugangsstatus, damit Pro-Funktionen auf dem Gerät korrekt freigeschaltet werden",
+        s9_p3: "Für Käufe und Abonnements gelten ergänzend die Datenschutz- und Nutzungsbedingungen von Apple.",
+
+        s10_title: "10. Berechtigungen",
+        s10_p1: "Je nach Plattform und verwendeter Funktion kann die App folgende Systemberechtigungen anfordern oder verwenden:",
+        s10_l1: "Kamera (zum Scannen von Dokumenten)",
+        s10_l2: "Zugriff auf Dateien oder Fotos (Import / Export)",
+        s10_l3: "Mitteilungen / Benachrichtigungen (für Dokument-Erinnerungen)",
+        s10_l4: "Biometrie / Face ID (für den optionalen App-Schutz)",
+        s10_l5: "Netzwerkzugriff (für optionale iCloud-Synchronisation sowie App-Store-Kaufprüfung)",
+        s10_p2: "Hinweis: Einzelne Berechtigungen können technisch auch bereits beim App-Start oder beim Vorbereiten einer Funktion angefragt werden.",
+
+        s11_title: "11. Export und Weitergabe",
+        s11_p1: "Dokumente können von Ihnen exportiert, geteilt oder gedruckt werden. Die Weitergabe erfolgt ausschließlich auf Ihre ausdrückliche Aktion.",
+        s11_p2: "Wenn Sie Dokumente an externe Dienste wie E-Mail- oder Cloud-Anbieter übergeben, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.",
+
+        s12_title: "12. Löschung und Aufbewahrung",
+        s12_p1: "Sie können Dokumente jederzeit innerhalb der App löschen.",
+        s12_p2: "Bei aktivierter Synchronisation werden Löschungen auf Ihre anderen Geräte übertragen. Technische Löschmarkierungen können vorübergehend gespeichert bleiben und werden anschließend bereinigt.",
+        s12_p3: "Wenn Sie die App deinstallieren, werden lokale Daten auf dem jeweiligen Gerät entfernt. iCloud-Daten unterliegen zusätzlich Ihren persönlichen iCloud-Einstellungen.",
+
+        s13_title: "13. Keine Werbung und kein Tracking",
+        s13_p1: "MyDocuBox verwendet:",
+        s13_l1: "keine Werbenetzwerke",
+        s13_l2: "kein Nutzer-Tracking",
+        s13_l3: "kein Profiling",
+        s13_l4: "keine Analyse-SDKs",
+
+        s14_title: "14. Änderungen dieser Datenschutzerklärung",
+        s14_p1: "Diese Datenschutzerklärung kann bei zukünftigen Versionen der App angepasst werden. Die jeweils aktuelle Version ist in der App einsehbar.",
+
+        s15_title: "15. Ihre Rechte",
+        s15_p1: "Soweit personenbezogene Daten verarbeitet werden, gelten die Rechte gemäß der Datenschutz-Grundverordnung (DSGVO).",
+        s15_p2: "Da MyDocuBox keine zentralen Benutzerkonten oder Server des Entwicklers verwendet, verbleiben die meisten Daten ausschließlich auf Ihrem Gerät oder in Ihrem persönlichen iCloud-Speicher.",
+
+        summary_title: "Kurzfassung:",
+        summary_p1: "Ihre Dokumente bleiben unter Ihrer Kontrolle.",
+        summary_p2: "Standardmäßig werden Daten lokal gespeichert.",
+        summary_p3: "Optional können Dokumente über Ihren eigenen iCloud-Speicher zwischen Ihren Geräten synchronisiert werden.",
+
+        footer_privacy: "Datenschutzerklärung",
+        footer_imprint: "Impressum"
+      },
+
+      en: {
+        page_title: "Privacy Policy – MyDocuBox",
+        meta_description: "Privacy Policy of MyDocuBox – local storage, optional iCloud sync, no tracking, no ads.",
+        og_title: "Privacy Policy – MyDocuBox",
+        og_description: "Learn how MyDocuBox stores your data locally, optionally syncs via iCloud and avoids tracking.",
+
+        nav_home: "Home",
+        nav_privacy: "Privacy",
+        nav_imprint: "Imprint",
+
+        page_heading: "Privacy Policy",
+        meta_date: "Last updated: 03/15/2026",
+
+        s1_title: "1. General principle",
+        s1_p1: "MyDocuBox is an app for structured management of personal documents with local storage and optional iCloud synchronization.",
+        s1_p2: "This privacy policy applies to the use of the MyDocuBox mobile application on Apple platforms.",
+        s1_p3: "Core principles of the app:",
+        s1_l1: "No user account required",
+        s1_l2: "No own servers operated by the developer",
+        s1_l3: "Local storage by default",
+        s1_l4: "Optional synchronization via your personal iCloud storage",
+
+        s2_title: "2. Controller",
+        s2_line1: "MyDocuBox",
+        s2_line2: "Indie app / solo developer",
+        s2_line3: "Email:",
+
+        s3_title: "3. What data does the app process?",
+        s3_p1: "The app only processes data that you import into the app yourself, create there, or trigger by using the app's functions.",
+        s3_p2: "This includes in particular:",
+        s3_l1: "imported documents (e.g. PDF, JPG, PNG, DOC/DOCX, TXT)",
+        s3_l2: "metadata such as file name, category, date, UUID or modification time",
+        s3_l3: "recognized text from OCR/text extraction",
+        s3_l4: "technical synchronization information (e.g. sync_state, deletion markers)",
+        s3_l5: "reminder timestamps for documents if you use reminders",
+        s3_l6: "local app settings, e.g. for app lock",
+        s3_l7: "local technical information about Pro access status",
+        s3_p3: "The developer does not collect document contents through own servers.",
+
+        s4_title: "4. Where data is stored",
+        s4_h3_1: "Locally on your device",
+        s4_p1: "Documents and related data are stored locally on your device by default.",
+        s4_p2: "For this, the app uses:",
+        s4_l1: "file storage within the app sandbox",
+        s4_l2: "a local database",
+        s4_l3: "local configuration files for settings and app functions",
+        s4_h3_2: "Optionally in iCloud",
+        s4_p3: "If you enable iCloud for MyDocuBox, documents and related synchronization data can additionally be synchronized between your Apple devices through your personal iCloud storage.",
+        s4_p4: "In this case:",
+        s4_l4: "Data is transferred via Apple infrastructure",
+        s4_l5: "The developer does not operate own servers for document storage or sync",
+        s4_l6: "The developer has no direct access to your documents",
+        s4_l7: "Processing takes place within your Apple iCloud environment",
+        s4_p5: "Note: Reminder timestamps remain local on the respective device and are not synchronized via iCloud.",
+
+        s5_title: "5. Synchronization",
+        s5_p1: "Synchronization can be started manually and also runs automatically while the app is active.",
+        s5_p2: "This means:",
+        s5_l1: "if no connection is available, changes remain stored locally",
+        s5_l2: "changes are synchronized as soon as a connection is available again",
+        s5_l3: "conflicts are technically resolved based on the modification timestamp",
+        s5_l4: "deletions are transferred between devices using technical deletion markers",
+
+        s6_title: "6. Import and opening through other apps",
+        s6_p1: "If you import files via “Share with MyDocuBox”, they are first processed temporarily in the app group area and then transferred into the app.",
+        s6_p2: "When editing documents using iOS system functions such as Preview or Markup, changes are written back to the local original file and synchronized afterwards if needed.",
+
+        s7_title: "7. OCR and text processing",
+        s7_p1: "The OCR and text extraction functions serve exclusively to:",
+        s7_l1: "make documents easier to search",
+        s7_l2: "provide a preview of recognized text",
+        s7_p2: "Processing takes place locally on the device. No document contents are transmitted to the developer.",
+
+        s8_title: "8. App protection and biometrics",
+        s8_p1: "If you enable the optional app protection, MyDocuBox may use system features such as Face ID, Touch ID or other available biometric methods for unlocking.",
+        s8_p2: "This means:",
+        s8_l1: "biometric verification takes place exclusively through the operating system",
+        s8_l2: "the app does not store raw biometric data",
+        s8_l3: "only the information whether app protection is enabled is stored locally",
+
+        s9_title: "9. Pro version and in-app purchases",
+        s9_p1: "MyDocuBox may offer paid Pro features via in-app purchases or App Store subscriptions.",
+        s9_p2: "In this case:",
+        s9_l1: "purchase processing, billing and payment data are handled by Apple",
+        s9_l2: "the developer does not receive full payment data",
+        s9_l3: "the app stores only technical information locally about access status so that Pro features can be correctly unlocked on the device",
+        s9_p3: "Apple’s privacy policy and terms of use also apply to purchases and subscriptions.",
+
+        s10_title: "10. Permissions",
+        s10_p1: "Depending on the platform and features used, the app may request or use the following system permissions:",
+        s10_l1: "camera (for scanning documents)",
+        s10_l2: "access to files or photos (import / export)",
+        s10_l3: "notifications (for document reminders)",
+        s10_l4: "biometrics / Face ID (for optional app protection)",
+        s10_l5: "network access (for optional iCloud synchronization and App Store purchase verification)",
+        s10_p2: "Note: Some permissions may technically also be requested when launching the app or preparing a function.",
+
+        s11_title: "11. Export and sharing",
+        s11_p1: "Documents can be exported, shared or printed by you. Sharing only takes place based on your explicit action.",
+        s11_p2: "If you transfer documents to external services such as email or cloud providers, the privacy policies of the respective provider apply.",
+
+        s12_title: "12. Deletion and retention",
+        s12_p1: "You can delete documents at any time within the app.",
+        s12_p2: "If synchronization is enabled, deletions are transferred to your other devices. Technical deletion markers may remain stored temporarily and are then cleaned up.",
+        s12_p3: "If you uninstall the app, local data is removed from the respective device. iCloud data is additionally subject to your personal iCloud settings.",
+
+        s13_title: "13. No advertising and no tracking",
+        s13_p1: "MyDocuBox uses:",
+        s13_l1: "no advertising networks",
+        s13_l2: "no user tracking",
+        s13_l3: "no profiling",
+        s13_l4: "no analytics SDKs",
+
+        s14_title: "14. Changes to this privacy policy",
+        s14_p1: "This privacy policy may be updated in future app versions. The current version can be viewed in the app.",
+
+        s15_title: "15. Your rights",
+        s15_p1: "Where personal data is processed, the rights under the General Data Protection Regulation (GDPR) apply.",
+        s15_p2: "Since MyDocuBox does not use central user accounts or developer-operated servers, most data remains exclusively on your device or in your personal iCloud storage.",
+
+        summary_title: "Summary:",
+        summary_p1: "Your documents remain under your control.",
+        summary_p2: "By default, data is stored locally.",
+        summary_p3: "Optionally, documents can be synchronized between your devices via your own iCloud storage.",
+
+        footer_privacy: "Privacy Policy",
+        footer_imprint: "Imprint"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.de;
+
+      document.documentElement.lang = lang;
+      document.title = t.page_title;
+
+      document.querySelector('meta[name="description"]').setAttribute("content", t.meta_description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.og_description);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+
+    function setLang(lang) {
+      localStorage.setItem("mydocubox_lang", lang);
+      applyLang(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get("lang");
+    const savedLang = localStorage.getItem("mydocubox_lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+    const initialLang = (paramLang === "de" || paramLang === "en") ? paramLang : (savedLang || browserLang);
+
+    applyLang(initialLang);
+  </script>
 </body>
 </html>
