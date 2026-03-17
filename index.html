@@ -1,305 +1,476 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-itunes-app" content="app-id=6760269404">
- 
-<title>MyDocuBox – Dein Dokumenten Scanner und Tresor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=6760269404">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
-<link rel="apple-touch-icon" href="/mydocubox32.png">
+  <title>MyDocuBox – Dein Dokumenten Scanner und Tresor</title>
 
-<meta property="og:title" content="MyDocuBox – Dein Dokumenten Scanner und sicherer Dokumenten Tresor">
-<meta property="og:description" content="Scanne, speichere und organisiere deine Dokumente sicher und privat.">
-<meta property="og:image" content="https://mydocubox.app/mydocubox.png">
-<meta property="og:url" content="https://mydocubox.app">
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'></script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "SoftwareApplication",
- "name": "MyDocuBox",
- "operatingSystem": "iOS",
- "applicationCategory": "BusinessApplication",
- "description": "MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente.",
- "url": "https://mydocubox.app",
- "downloadUrl": "https://apps.apple.com/app/id6760269404",
- "image": "https://mydocubox.app/mydocubox.png",
- "author": {
-   "@type": "Organization",
-   "name": "MyDocuBox"
- }
-}
-</script>
-</script>
-<meta name="description" content="MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, verschlüsselt und einfach.">
-    
-<style>
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0a1f44;
-    color: white;
-}
+  <link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
+  <link rel="apple-touch-icon" href="/mydocubox32.png">
 
-header {
-    padding: 20px;
-    text-align: center;
-}
+  <link rel="alternate" hreflang="de" href="https://mydocubox.app/">
+  <link rel="alternate" hreflang="en" href="https://mydocubox.app/?lang=en">
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #4da3ff;
-    font-weight: 500;
-}
+  <meta name="description" content="MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, verschlüsselt und einfach.">
+  <meta property="og:title" content="MyDocuBox – Dein Dokumenten Scanner und sicherer Dokumenten Tresor">
+  <meta property="og:description" content="Scanne, speichere und organisiere deine Dokumente sicher und privat.">
+  <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
+  <meta property="og:url" content="https://mydocubox.app">
+  <meta property="og:type" content="website">
 
-.hero {
-    text-align: center;
-    padding: 40px 20px 60px 20px;
-}
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 
-.hero-logo {
-    width: 240px;
-    margin-bottom: 6px;
-    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyDocuBox",
+    "operatingSystem": "iOS",
+    "applicationCategory": "BusinessApplication",
+    "description": "MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente.",
+    "url": "https://mydocubox.app",
+    "downloadUrl": "https://apps.apple.com/app/id6760269404",
+    "image": "https://mydocubox.app/mydocubox.png",
+    "author": {
+      "@type": "Organization",
+      "name": "MyDocuBox"
+    }
+  }
+  </script>
 
-.hero h1 {
-    font-size: 48px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a1f44;
+      color: white;
+    }
 
-.hero p {
-    color: #cbd6f0;
-    font-size: 18px;
-}
+    header {
+      padding: 20px;
+      text-align: center;
+    }
 
-.small-note {
-    color: #9fb7ff;
-    font-size: 14px;
-    margin-top: 10px;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
 
-.button {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #007bff;
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 500;
-}
+    nav a {
+      text-decoration: none;
+      color: #4da3ff;
+      font-weight: 500;
+    }
 
-.store-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 12px;
+    }
 
-.section {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 70px 20px;
-}
+    .lang-switch button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
 
-.card {
-    background: linear-gradient(145deg, #ffd84d, #ffcc00);
-    color: #0a1f44;
-    padding: 35px;
-    border-radius: 18px;
-    margin-bottom: 30px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .lang-switch button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-}
+    .hero {
+      text-align: center;
+      padding: 40px 20px 60px 20px;
+    }
 
-.card p {
-    color: #0a1f44;
-}
+    .hero-logo {
+      width: 240px;
+      margin-bottom: 6px;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+    }
 
-.card ul {
-    color: #0a1f44;
-}
+    .hero h1 {
+      font-size: 48px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
 
-h2 {
-    margin-top: 0;
-}
+    .hero p {
+      color: #cbd6f0;
+      font-size: 18px;
+    }
 
-ul {
-    padding-left: 20px;
-}
+    .small-note {
+      color: #9fb7ff;
+      font-size: 14px;
+      margin-top: 10px;
+    }
 
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    color: #8ea4d6;
-    font-size: 14px;
-}
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #007bff;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-}
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
 
-.support-mail {
-    color: #4da3ff;
-    font-weight: 500;
-    text-decoration: none;
-}
+    .section {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
 
-.support-mail:hover {
-    text-decoration: underline;
-}
-</style>
+    .card {
+      background: linear-gradient(145deg, #ffd84d, #ffcc00);
+      color: #0a1f44;
+      padding: 35px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .card p,
+    .card ul,
+    .card li {
+      color: #0a1f44;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #8ea4d6;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .support-mail:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <nav>
+      <a href="#features" data-i18n="nav_features">Funktionen</a>
+      <a href="#security" data-i18n="nav_security">Sicherheit</a>
+      <a href="#support" data-i18n="nav_support">Support</a>
+      <a href="Datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
 
-<header>
-<nav>
-<a href="#features">Funktionen</a>
-<a href="#security">Sicherheit</a>
-<a href="#support">Support</a>
-<a href="Datenschutz.html">Datenschutz</a>
-</nav>
-</header>
+      <div class="lang-switch">
+        <button id="btn-de" onclick="setLang('de')">DE</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </header>
 
-<section class="hero">
-<img src="84CE5652-8DB2-4D16-A279-95500E546CAC.png" alt="MyDocuBox Logo" class="hero-logo">
+  <section class="hero">
+    <img src="84CE5652-8DB2-4D16-A279-95500E546CAC.png" alt="MyDocuBox Logo" class="hero-logo">
 
-<h1>MyDocuBox</h1>
-<p>
-Organisiere, sichere und finde deine Dokumente in Sekunden –  
-100% privat. 100% unter deiner Kontrolle.
-</p>
-    
-<p class="small-note">
-Keine Datensammlung. Kein Tracking. Kein Profiling.
-</p>
+    <h1>MyDocuBox</h1>
 
-<div class="store-buttons">
-<a href="https://apps.apple.com/app/id6760269404" target="_blank" rel="noopener noreferrer">
-<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="180" alt="Download on the App Store">
-</a>
+    <p data-i18n="hero_text">
+      Organisiere, sichere und finde deine Dokumente in Sekunden –
+      100% privat. 100% unter deiner Kontrolle.
+    </p>
 
-<a class="button" href="https://apps.apple.com/app/id6760269404" target="_blank" rel="noopener noreferrer">
-App herunterladen
-</a>
-</div>
+    <p class="small-note" data-i18n="hero_note">
+      Keine Datensammlung. Kein Tracking. Kein Profiling.
+    </p>
 
-<p class="small-note">
-Kostenlos testen – Upgrade jederzeit möglich.
-</p>
-</section>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/app/id6760269404" target="_blank" rel="noopener noreferrer">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="180" alt="Download on the App Store">
+      </a>
 
-<section id="features" class="section">
+      <a class="button" href="https://apps.apple.com/app/id6760269404" target="_blank" rel="noopener noreferrer" data-i18n="download_button">
+        App herunterladen
+      </a>
+    </div>
 
-<div class="card">
-<h2>🧠 Intelligente Offline-Erkennung</h2>
-<p>
-Beim Scannen erkennt MyDocuBox automatisch relevante Inhalte
-und schlägt passende Dateinamen sowie Kategorien vor.
-</p>
-<p>
-Die Analyse erfolgt vollständig offline – deine Dokumente verlassen dein Gerät nicht.
-</p>
-</div>
+    <p class="small-note" data-i18n="hero_trial">
+      Kostenlos testen – Upgrade jederzeit möglich.
+    </p>
+  </section>
 
-<div class="card">
-<h2>⚡ Schnelle OCR-Suche</h2>
-<p>
-Finde Rechnungen, Verträge oder wichtige Schreiben in Sekunden –
-selbst wenn du nur ein Stichwort kennst.
-</p>
-</div>
+  <section id="features" class="section">
+    <div class="card">
+      <h2 data-i18n="feature1_title">🧠 Intelligente Offline-Erkennung</h2>
+      <p data-i18n="feature1_text1">
+        Beim Scannen erkennt MyDocuBox automatisch relevante Inhalte
+        und schlägt passende Dateinamen sowie Kategorien vor.
+      </p>
+      <p data-i18n="feature1_text2">
+        Die Analyse erfolgt vollständig offline – deine Dokumente verlassen dein Gerät nicht.
+      </p>
+    </div>
 
-<div class="card">
-<h2>🔔 Erinnerungen direkt im Dokument</h2>
-<p>
-Speichere Zahlungsfristen oder Termine direkt im Dokument.
-MyDocuBox erinnert dich rechtzeitig.
-</p>
-</div>
+    <div class="card">
+      <h2 data-i18n="feature2_title">⚡ Schnelle OCR-Suche</h2>
+      <p data-i18n="feature2_text">
+        Finde Rechnungen, Verträge oder wichtige Schreiben in Sekunden –
+        selbst wenn du nur ein Stichwort kennst.
+      </p>
+    </div>
 
-</section>
-<section id="security" class="section">
+    <div class="card">
+      <h2 data-i18n="feature3_title">🔔 Erinnerungen direkt im Dokument</h2>
+      <p data-i18n="feature3_text">
+        Speichere Zahlungsfristen oder Termine direkt im Dokument.
+        MyDocuBox erinnert dich rechtzeitig.
+      </p>
+    </div>
+  </section>
 
-<div class="card">
-<h2>🔒 Lokal First – Deine Daten gehören nur dir</h2>
-<p>
-Alle Dokumente werden ausschließlich lokal gespeichert.
-Die App funktioniert vollständig offline – jederzeit.
-</p>
-<p>
-Keine Server-Abhängigkeit. Keine externe Analyse.
-</p>
-</div>
+  <section id="security" class="section">
+    <div class="card">
+      <h2 data-i18n="security1_title">🔒 Lokal First – Deine Daten gehören nur dir</h2>
+      <p data-i18n="security1_text1">
+        Alle Dokumente werden ausschließlich lokal gespeichert.
+        Die App funktioniert vollständig offline – jederzeit.
+      </p>
+      <p data-i18n="security1_text2">
+        Keine Server-Abhängigkeit. Keine externe Analyse.
+      </p>
+    </div>
 
-<div class="card">
-<h2>☁️ Automatische iCloud-Synchronisierung</h2>
-<p>
-Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien
-automatisch über deinen persönlichen iCloud-Speicher synchronisiert.
-</p>
-<p>
-Die Daten bleiben innerhalb deines Apple-Ökosystems.
-Wir haben keinen Zugriff auf deine Inhalte.
-</p>
-</div>
+    <div class="card">
+      <h2 data-i18n="security2_title">☁️ Automatische iCloud-Synchronisierung</h2>
+      <p data-i18n="security2_text1">
+        Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien
+        automatisch über deinen persönlichen iCloud-Speicher synchronisiert.
+      </p>
+      <p data-i18n="security2_text2">
+        Die Daten bleiben innerhalb deines Apple-Ökosystems.
+        Wir haben keinen Zugriff auf deine Inhalte.
+      </p>
+    </div>
 
-<div class="card">
-<h2>🛡 Biometrische App-Sperre</h2>
-<p>
-Schütze deine Dokumente zusätzlich mit Face ID oder Touch ID.
-Optional aktivierbar – ohne biometrische Authentifizierung lässt sich die App nicht öffnen.
-</p>
-</div>
+    <div class="card">
+      <h2 data-i18n="security3_title">🛡 Biometrische App-Sperre</h2>
+      <p data-i18n="security3_text">
+        Schütze deine Dokumente zusätzlich mit Face ID oder Touch ID.
+        Optional aktivierbar – ohne biometrische Authentifizierung lässt sich die App nicht öffnen.
+      </p>
+    </div>
 
-<div class="card">
-<h2>Warum MyDocuBox anders ist</h2>
-<ul>
-<li>✔ Lokal First Architektur</li>
-<li>✔ Vollständig offline nutzbar</li>
-<li>✔ Biometrisch geschützt</li>
-<li>✔ Intelligente Vorschläge ohne Cloud</li>
-<li>✔ Keine Werbung</li>
-<li>✔ Keine Datensammlung</li>
-</ul>
-</div>
+    <div class="card">
+      <h2 data-i18n="why_title">Warum MyDocuBox anders ist</h2>
+      <ul>
+        <li data-i18n="why1">✔ Lokal First Architektur</li>
+        <li data-i18n="why2">✔ Vollständig offline nutzbar</li>
+        <li data-i18n="why3">✔ Biometrisch geschützt</li>
+        <li data-i18n="why4">✔ Intelligente Vorschläge ohne Cloud</li>
+        <li data-i18n="why5">✔ Keine Werbung</li>
+        <li data-i18n="why6">✔ Keine Datensammlung</li>
+      </ul>
+    </div>
+  </section>
 
-</section>
+  <section id="support" class="section">
+    <div class="card">
+      <h2 data-i18n="support_title">Support kontaktieren</h2>
+      <p data-i18n="support_time">Antwortzeit: 24–48 Stunden</p>
+      <p>
+        <span data-i18n="support_text">Schreib uns direkt an:</span>
+        <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+      </p>
+    </div>
+  </section>
 
-<section id="support" class="section">
-<div class="card">
-  <h2>Support kontaktieren</h2>
-  <p>Antwortzeit: 24–48 Stunden</p>
-  <p>
-    Schreib uns direkt an:
+  <footer>
+    © 2026 MyDocuBox –
     <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
-  </p>
-</div>
-</section>
+    <a href="Datenschutz.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+  </footer>
 
-<footer>
-© 2026 MyDocuBox –
-<a class="support-mail" href="mailto:support@mydocubox.app">
-support@mydocubox.app
-</a>
+  <script>
+    const translations = {
+      de: {
+        page_title: "MyDocuBox – Dein Dokumenten Scanner und Tresor",
+        meta_description: "MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, verschlüsselt und einfach.",
+        og_title: "MyDocuBox – Dein Dokumenten Scanner und sicherer Dokumenten Tresor",
+        og_description: "Scanne, speichere und organisiere deine Dokumente sicher und privat.",
 
-<a href="Datenschutz.html">Datenschutzerklärung</a>
-<a href="impressum.html">Impressum</a>
-</footer>
+        nav_features: "Funktionen",
+        nav_security: "Sicherheit",
+        nav_support: "Support",
+        nav_privacy: "Datenschutz",
 
+        hero_text: "Organisiere, sichere und finde deine Dokumente in Sekunden – 100% privat. 100% unter deiner Kontrolle.",
+        hero_note: "Keine Datensammlung. Kein Tracking. Kein Profiling.",
+        download_button: "App herunterladen",
+        hero_trial: "Kostenlos testen – Upgrade jederzeit möglich.",
+
+        feature1_title: "🧠 Intelligente Offline-Erkennung",
+        feature1_text1: "Beim Scannen erkennt MyDocuBox automatisch relevante Inhalte und schlägt passende Dateinamen sowie Kategorien vor.",
+        feature1_text2: "Die Analyse erfolgt vollständig offline – deine Dokumente verlassen dein Gerät nicht.",
+
+        feature2_title: "⚡ Schnelle OCR-Suche",
+        feature2_text: "Finde Rechnungen, Verträge oder wichtige Schreiben in Sekunden – selbst wenn du nur ein Stichwort kennst.",
+
+        feature3_title: "🔔 Erinnerungen direkt im Dokument",
+        feature3_text: "Speichere Zahlungsfristen oder Termine direkt im Dokument. MyDocuBox erinnert dich rechtzeitig.",
+
+        security1_title: "🔒 Lokal First – Deine Daten gehören nur dir",
+        security1_text1: "Alle Dokumente werden ausschließlich lokal gespeichert. Die App funktioniert vollständig offline – jederzeit.",
+        security1_text2: "Keine Server-Abhängigkeit. Keine externe Analyse.",
+
+        security2_title: "☁️ Automatische iCloud-Synchronisierung",
+        security2_text1: "Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien automatisch über deinen persönlichen iCloud-Speicher synchronisiert.",
+        security2_text2: "Die Daten bleiben innerhalb deines Apple-Ökosystems. Wir haben keinen Zugriff auf deine Inhalte.",
+
+        security3_title: "🛡 Biometrische App-Sperre",
+        security3_text: "Schütze deine Dokumente zusätzlich mit Face ID oder Touch ID. Optional aktivierbar – ohne biometrische Authentifizierung lässt sich die App nicht öffnen.",
+
+        why_title: "Warum MyDocuBox anders ist",
+        why1: "✔ Lokal First Architektur",
+        why2: "✔ Vollständig offline nutzbar",
+        why3: "✔ Biometrisch geschützt",
+        why4: "✔ Intelligente Vorschläge ohne Cloud",
+        why5: "✔ Keine Werbung",
+        why6: "✔ Keine Datensammlung",
+
+        support_title: "Support kontaktieren",
+        support_time: "Antwortzeit: 24–48 Stunden",
+        support_text: "Schreib uns direkt an:",
+        footer_privacy: "Datenschutzerklärung",
+        footer_imprint: "Impressum"
+      },
+
+      en: {
+        page_title: "MyDocuBox – Your document scanner and vault",
+        meta_description: "MyDocuBox is a secure app for scanning, storing and organizing your documents. Private, encrypted and simple.",
+        og_title: "MyDocuBox – Your secure document scanner and private document vault",
+        og_description: "Scan, store and organize your documents securely and privately.",
+
+        nav_features: "Features",
+        nav_security: "Security",
+        nav_support: "Support",
+        nav_privacy: "Privacy",
+
+        hero_text: "Organize, protect and find your documents in seconds – 100% private. 100% under your control.",
+        hero_note: "No data collection. No tracking. No profiling.",
+        download_button: "Download app",
+        hero_trial: "Try it free – upgrade anytime.",
+
+        feature1_title: "🧠 Intelligent offline recognition",
+        feature1_text1: "When scanning, MyDocuBox automatically detects relevant content and suggests suitable file names and categories.",
+        feature1_text2: "The analysis runs completely offline – your documents never leave your device.",
+
+        feature2_title: "⚡ Fast OCR search",
+        feature2_text: "Find invoices, contracts or important documents in seconds – even if you only remember a single keyword.",
+
+        feature3_title: "🔔 Reminders directly inside your document",
+        feature3_text: "Save payment deadlines or appointments directly in the document. MyDocuBox reminds you in time.",
+
+        security1_title: "🔒 Local first – your data belongs only to you",
+        security1_text1: "All documents are stored exclusively on your device. The app works fully offline – anytime.",
+        security1_text2: "No server dependency. No external analysis.",
+
+        security2_title: "☁️ Automatic iCloud sync",
+        security2_text1: "If iCloud is enabled, your encrypted files are automatically synced through your personal iCloud storage.",
+        security2_text2: "Your data stays inside your Apple ecosystem. We do not have access to your content.",
+
+        security3_title: "🛡 Biometric app lock",
+        security3_text: "Protect your documents with Face ID or Touch ID. Optional to enable – without biometric authentication, the app cannot be opened.",
+
+        why_title: "Why MyDocuBox is different",
+        why1: "✔ Local-first architecture",
+        why2: "✔ Fully usable offline",
+        why3: "✔ Biometrically protected",
+        why4: "✔ Intelligent suggestions without cloud",
+        why5: "✔ No ads",
+        why6: "✔ No data collection",
+
+        support_title: "Contact support",
+        support_time: "Response time: 24–48 hours",
+        support_text: "Write to us directly:",
+        footer_privacy: "Privacy Policy",
+        footer_imprint: "Imprint"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.de;
+
+      document.documentElement.lang = lang;
+      document.title = t.page_title;
+
+      document.querySelector('meta[name="description"]').setAttribute("content", t.meta_description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.og_description);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+
+    function setLang(lang) {
+      localStorage.setItem("mydocubox_lang", lang);
+      applyLang(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get("lang");
+    const savedLang = localStorage.getItem("mydocubox_lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+    const initialLang = paramLang === "de" || paramLang === "en" ? paramLang : (savedLang || browserLang);
+
+    applyLang(initialLang);
+  </script>
 </body>
 </html>
