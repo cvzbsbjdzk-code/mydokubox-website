@@ -6,13 +6,20 @@
   <title>Nutzungsbedingungen – MyDocuBox</title>
 
   <meta name="description" content="Nutzungsbedingungen von MyDocuBox – rechtliche Hinweise zur Nutzung der App.">
-  <meta property="og:title" content="Terms of Use – MyDocuBox">
-  <meta property="og:description" content="Terms of Use for MyDocuBox – legal information about using the app.">
+  <meta property="og:title" content="Nutzungsbedingungen – MyDocuBox">
+  <meta property="og:description" content="Rechtliche Hinweise zur Nutzung der App MyDocuBox.">
   <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
   <meta property="og:url" content="https://mydocubox.app/terms.html">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/mydocubox16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="alternate" hreflang="de" href="https://mydocubox.app/terms.html">
+  <link rel="alternate" hreflang="en" href="https://mydocubox.app/terms.html?lang=en">
 
   <style>
     body {
@@ -31,6 +38,7 @@
     nav {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
@@ -78,152 +86,585 @@
       margin: 0 0 10px 0;
     }
 
+    .meta {
+      color: #9fb7ff;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
     .card {
       background: linear-gradient(145deg, #ffd84d, #ffcc00);
       color: #0a1f44;
       padding: 35px;
       border-radius: 18px;
       margin-bottom: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
     }
 
-    .card h2, .card p, .card li {
+    .card h2,
+    .card h3,
+    .card p,
+    .card li,
+    .card strong,
+    .card a,
+    .card code {
       color: #0a1f44;
     }
 
-    .support-mail {
-      color: #4da3ff;
-      text-decoration: none;
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+      border-bottom: 1px solid rgba(10, 31, 68, 0.15);
+      padding-bottom: 8px;
+    }
+
+    .card h3 {
+      margin-top: 24px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 12px 0;
+    }
+
+    .card ul {
+      margin: 10px 0 16px 22px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
+    .summary {
+      margin-top: 10px;
+      padding: 18px 20px;
+      background: rgba(10, 31, 68, 0.08);
+      border-left: 4px solid #0a1f44;
+      border-radius: 8px;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px 50px 20px;
       color: #8ea4d6;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .support-mail:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Startseite</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Datenschutz</a>
+      <a href="terms.html" data-i18n="nav_terms">Nutzungsbedingungen</a>
+      <a href="support.html" data-i18n="nav_support">Support</a>
+      <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
 
-<header>
-  <nav>
-    <a href="index.html" data-i18n="nav_home">Startseite</a>
-    <a href="Datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
-    <a href="support.html" data-i18n="nav_support">Support</a>
+      <div class="lang-switch">
+        <button id="btn-de" onclick="setLang('de')">DE</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </header>
 
-    <div class="lang-switch">
-      <button id="btn-de" onclick="setLang('de')">DE</button>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
+  <div class="container">
+    <section class="hero">
+      <h1 data-i18n="page_heading">Nutzungsbedingungen</h1>
+      <p class="meta" data-i18n="meta_date">Stand: 15.03.2026</p>
+    </section>
+
+    <div class="card">
+      <h2 data-i18n="s1_title">1. Allgemeines</h2>
+      <p data-i18n="s1_p1">
+        Diese Nutzungsbedingungen regeln die Nutzung der App <strong>MyDocuBox</strong>.
+      </p>
+      <p data-i18n="s1_p2">
+        MyDocuBox ist eine App zur strukturierten Verwaltung persönlicher Dokumente mit lokaler Speicherung und optionaler iCloud-Synchronisation.
+      </p>
+      <p data-i18n="s1_p3">
+        Mit der Nutzung der App erklären Sie sich mit diesen Bedingungen einverstanden.
+      </p>
+      <p data-i18n="s1_p4">
+        Für Downloads über den Apple App Store gelten ergänzend die Apple-Bedingungen. Soweit im App Store keine abweichende individuelle Endnutzer-Lizenzvereinbarung hinterlegt ist, gilt zusätzlich die Apple Standard EULA:
+      </p>
+      <p>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+          https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+        </a>
+      </p>
     </div>
-  </nav>
-</header>
 
-<div class="container">
+    <div class="card">
+      <h2 data-i18n="s2_title">2. Lizenz und zulässige Nutzung</h2>
+      <p data-i18n="s2_p1">
+        MyDocuBox wird Ihnen zur persönlichen, nicht ausschließlichen und nicht übertragbaren Nutzung im Rahmen der jeweils anwendbaren App-Store-Bedingungen bereitgestellt.
+      </p>
+      <p data-i18n="s2_p2">Nicht gestattet ist insbesondere:</p>
+      <ul>
+        <li data-i18n="s2_l1">die Nutzung der App zu rechtswidrigen Zwecken</li>
+        <li data-i18n="s2_l2">die Umgehung technischer Schutzmechanismen</li>
+        <li data-i18n="s2_l3">die unzulässige Vervielfältigung, Verbreitung oder Weitergabe der App</li>
+        <li data-i18n="s2_l4">die Nutzung entgegen anwendbaren Plattform- oder Lizenzbedingungen</li>
+      </ul>
+    </div>
 
-  <section class="hero">
-    <h1 data-i18n="title">Nutzungsbedingungen</h1>
-  </section>
+    <div class="card">
+      <h2 data-i18n="s3_title">3. Zweck und Funktionsumfang</h2>
+      <p data-i18n="s3_p1">
+        MyDocuBox dient der persönlichen Dokumentenorganisation, insbesondere:
+      </p>
+      <ul>
+        <li data-i18n="s3_l1">Scannen, Import und Verwaltung von Dateien</li>
+        <li data-i18n="s3_l2">Kategorisierung, Suche und Vorschau</li>
+        <li data-i18n="s3_l3">OCR/Text-Erkennung und unterstützende Dokumentvorschläge</li>
+        <li data-i18n="s3_l4">optionale Erinnerungsfunktionen</li>
+        <li data-i18n="s3_l5">Synchronisation und Wiederherstellung über iCloud auf unterstützten Apple-Plattformen</li>
+      </ul>
+      <p data-i18n="s3_p2">
+        Automatisch erzeugte Inhalte oder Hilfsfunktionen, insbesondere OCR-Ergebnisse, Suchtreffer, Dateinamenvorschläge, Kategorievorschläge oder Erinnerungsvorschläge, dienen nur der Unterstützung und können unvollständig oder fehlerhaft sein. Die Prüfung der inhaltlichen Richtigkeit bleibt Ihre Verantwortung.
+      </p>
+    </div>
 
-  <div class="card">
-    <h2>1. Allgemeines</h2>
-    <p data-i18n="s1">
-      Diese Nutzungsbedingungen regeln die Nutzung der App MyDocuBox.
-    </p>
+    <div class="card">
+      <h2 data-i18n="s4_title">4. Verantwortung des Nutzers</h2>
+      <p data-i18n="s4_p1">
+        Die Nutzung der App erfolgt eigenverantwortlich.
+      </p>
+      <p data-i18n="s4_p2">Sie sind insbesondere selbst verantwortlich für:</p>
+      <ul>
+        <li data-i18n="s4_l1">den Schutz Ihres Geräts und Ihrer Zugangsdaten</li>
+        <li data-i18n="s4_l2">die Absicherung Ihres Apple-Kontos bei Nutzung von iCloud</li>
+        <li data-i18n="s4_l3">den Umgang mit sensiblen oder vertraulichen Dokumenten</li>
+        <li data-i18n="s4_l4">die Prüfung von OCR-, Such-, Vorschlags- und Erinnerungsfunktionen</li>
+        <li data-i18n="s4_l5">eigene Backup- und Aufbewahrungsstrategien</li>
+      </ul>
+      <p data-i18n="s4_p3">
+        Der Entwickler hat keinen direkten Zugriff auf Ihre Dokumentinhalte.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s5_title">5. Synchronisation und externe Infrastruktur</h2>
+      <p data-i18n="s5_p1">
+        Auf unterstützten Apple-Geräten kann MyDocuBox Daten über iCloud synchronisieren, sofern iCloud Drive verfügbar und für die App aktiviert ist.
+      </p>
+      <p data-i18n="s5_p2">
+        Die Synchronisation kann manuell ausgelöst werden und zusätzlich automatisch erfolgen, wenn die App aktiv ist.
+      </p>
+      <p data-i18n="s5_p3">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s5_l1">bei fehlender Verbindung verbleiben Änderungen zunächst lokal</li>
+        <li data-i18n="s5_l2">die spätere Synchronisation hängt von Netzwerk, iCloud-Verfügbarkeit und Plattformverhalten ab</li>
+        <li data-i18n="s5_l3">Konflikte können technisch nach Änderungszeitpunkt aufgelöst werden</li>
+        <li data-i18n="s5_l4">Löschungen können über technische Löschmarkierungen zwischen Geräten übertragen werden</li>
+      </ul>
+      <p data-i18n="s5_p4">
+        Die Verarbeitung in der Cloud erfolgt über Apple-Infrastruktur, nicht über eigene Server des Entwicklers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s6_title">6. Kostenpflichtige Funktionen, Käufe und Abonnements</h2>
+      <p data-i18n="s6_p1">
+        Bestimmte Funktionen können kostenpflichtig sein, insbesondere Pro-Funktionen, Abonnements oder einmalige Käufe.
+      </p>
+      <p data-i18n="s6_p2">Dabei gilt:</p>
+      <ul>
+        <li data-i18n="s6_l1">Käufe und Abonnements werden über den Apple App Store abgewickelt</li>
+        <li data-i18n="s6_l2">Preise, Laufzeiten und enthaltene Leistungen werden vor dem Kauf in der App bzw. im Store angezeigt</li>
+        <li data-i18n="s6_l3">sich automatisch verlängernde Abonnements verlängern sich automatisch, sofern sie nicht rechtzeitig über Ihre App-Store-Kontoeinstellungen gekündigt werden</li>
+        <li data-i18n="s6_l4">die Verwaltung und Kündigung von Abonnements erfolgt über Ihr Apple-Konto</li>
+        <li data-i18n="s6_l5">bereits erworbene Käufe können, soweit vom Store unterstützt, wiederhergestellt werden</li>
+      </ul>
+      <p data-i18n="s6_p3">
+        Für Zahlungsabwicklung, Abrechnung, Verlängerung, Kündigung und Erstattung gelten ergänzend die Bedingungen von Apple.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s7_title">7. Export, Teilen und Drittanbieter</h2>
+      <p data-i18n="s7_p1">
+        MyDocuBox bietet Funktionen zum Export, Teilen, Drucken und Öffnen von Dokumenten in anderen Apps oder Diensten.
+      </p>
+      <p data-i18n="s7_p2">
+        Wenn Dateien an externe Apps, Cloud-Dienste, E-Mail-Dienste oder andere Drittanbieter weitergegeben werden, erfolgt dies ausschließlich auf Ihre Initiative.
+      </p>
+      <p data-i18n="s7_p3">
+        Für die Verarbeitung durch diese Drittanbieter gelten ausschließlich deren eigene Bedingungen und Datenschutzbestimmungen.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s8_title">8. Verfügbarkeit und Änderungen</h2>
+      <p data-i18n="s8_p1">
+        Es besteht kein Anspruch auf eine bestimmte Verfügbarkeit, einen jederzeit fehlerfreien Betrieb oder einen unveränderten Funktionsumfang der App.
+      </p>
+      <p data-i18n="s8_p2">
+        Der Entwickler kann Funktionen anpassen, erweitern, einschränken oder entfernen, sofern keine zwingenden gesetzlichen Rechte entgegenstehen.
+      </p>
+      <p data-i18n="s8_p3">Dies betrifft insbesondere:</p>
+      <ul>
+        <li data-i18n="s8_l1">Änderungen einzelner Pro-Funktionen</li>
+        <li data-i18n="s8_l2">technische Anpassungen an Betriebssysteme oder Store-Vorgaben</li>
+        <li data-i18n="s8_l3">Einschränkungen aufgrund von iCloud-, App-Store- oder Plattformänderungen</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s9_title">9. Gewährleistung und Haftung</h2>
+      <p data-i18n="s9_p1">
+        MyDocuBox wird im gesetzlich zulässigen Rahmen als digitales Organisationswerkzeug bereitgestellt.
+      </p>
+      <p data-i18n="s9_p2">Der Entwickler übernimmt insbesondere keine Gewähr dafür, dass:</p>
+      <ul>
+        <li data-i18n="s9_l1">die App jederzeit unterbrechungsfrei oder fehlerfrei verfügbar ist</li>
+        <li data-i18n="s9_l2">Synchronisation, OCR, Suche, Erinnerungen oder Vorschlagsfunktionen stets vollständig oder korrekt arbeiten</li>
+        <li data-i18n="s9_l3">Datenverluste durch Gerätefehler, Betriebssystemänderungen, iCloud-Störungen, Plattformänderungen oder unsachgemäße Nutzung ausgeschlossen sind</li>
+      </ul>
+      <p data-i18n="s9_p3">
+        Soweit gesetzlich zulässig, ist die Haftung des Entwicklers für einfache Fahrlässigkeit ausgeschlossen.
+      </p>
+      <p data-i18n="s9_p4">
+        Unberührt bleiben zwingende gesetzliche Ansprüche, insbesondere bei Vorsatz, grober Fahrlässigkeit, Verletzung von Leben, Körper oder Gesundheit sowie in sonstigen Fällen zwingender gesetzlicher Haftung.
+      </p>
+      <p data-i18n="s9_p5">
+        MyDocuBox ersetzt keine rechtliche, steuerliche, medizinische oder finanzielle Beratung.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s10_title">10. Geistiges Eigentum</h2>
+      <p data-i18n="s10_p1">
+        Alle Rechte an der App, am Design, an der Marke, an Inhalten der App und am Quellcode verbleiben beim Entwickler oder bei den jeweils berechtigten Rechteinhabern.
+      </p>
+      <p data-i18n="s10_p2">
+        Die Nutzung der App ist nur im Rahmen dieser Nutzungsbedingungen und der anwendbaren App-Store-Lizenzbedingungen zulässig.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s11_title">11. Beendigung der Nutzung und Daten</h2>
+      <p data-i18n="s11_p1">
+        Sie können die Nutzung der App jederzeit durch Deinstallation beenden.
+      </p>
+      <p data-i18n="s11_p2">
+        Beim Entfernen der App werden lokale App-Daten auf dem jeweiligen Gerät entfernt, soweit das Betriebssystem dies vorsieht.
+      </p>
+      <p data-i18n="s11_p3">
+        iCloud-Daten unterliegen zusätzlich Ihren iCloud-Einstellungen und den Bedingungen von Apple.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s12_title">12. Änderungen der Nutzungsbedingungen</h2>
+      <p data-i18n="s12_p1">
+        Diese Nutzungsbedingungen können bei zukünftigen Versionen der App angepasst werden.
+      </p>
+      <p data-i18n="s12_p2">
+        Die jeweils aktuelle Version ist in der App einsehbar.
+      </p>
+
+      <div class="summary">
+        <p><strong data-i18n="summary_title">Kurzfassung:</strong></p>
+        <p data-i18n="summary_p1">MyDocuBox hilft bei der Dokumentenorganisation, speichert Daten standardmäßig lokal und synchronisiert optional über iCloud.</p>
+        <p data-i18n="summary_p2">Pro-Funktionen können kostenpflichtig sein und werden über den App Store abgewickelt.</p>
+        <p data-i18n="summary_p3">Für Ihre Dokumente, deren Prüfung und Ihre Backup-Strategie bleiben Sie selbst verantwortlich.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>2. Nutzung</h2>
-    <p data-i18n="s2">
-      Die App darf nur im Rahmen der geltenden Gesetze und App-Store-Bedingungen genutzt werden.
-    </p>
-  </div>
+  <footer>
+    © 2026 MyDocuBox –
+    <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+    <a href="privacy.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="terms.html" data-i18n="footer_terms">Nutzungsbedingungen</a>
+    <a href="support.html" data-i18n="footer_support">Support</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+  </footer>
 
-  <div class="card">
-    <h2>3. Funktionen</h2>
-    <p data-i18n="s3">
-      MyDocuBox dient der Organisation persönlicher Dokumente, einschließlich Scan, OCR und Speicherung.
-    </p>
-  </div>
+  <script>
+    const translations = {
+      de: {
+        page_title: "Nutzungsbedingungen – MyDocuBox",
+        meta_description: "Nutzungsbedingungen von MyDocuBox – rechtliche Hinweise zur Nutzung der App.",
+        og_title: "Nutzungsbedingungen – MyDocuBox",
+        og_description: "Rechtliche Hinweise zur Nutzung der App MyDocuBox.",
 
-  <div class="card">
-    <h2>4. Verantwortung</h2>
-    <p data-i18n="s4">
-      Sie sind für Ihre Daten und deren Sicherung selbst verantwortlich.
-    </p>
-  </div>
+        nav_home: "Startseite",
+        nav_privacy: "Datenschutz",
+        nav_terms: "Nutzungsbedingungen",
+        nav_support: "Support",
+        nav_imprint: "Impressum",
 
-  <div class="card">
-    <h2>5. Abonnements</h2>
-    <p data-i18n="s5">
-      Abonnements verlängern sich automatisch, sofern sie nicht gekündigt werden.
-    </p>
-    <p>
-      <a class="support-mail" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
-        Apple Standard EULA
-      </a>
-    </p>
-  </div>
+        page_heading: "Nutzungsbedingungen",
+        meta_date: "Stand: 15.03.2026",
 
-  <div class="card">
-    <h2>6. Haftung</h2>
-    <p data-i18n="s6">
-      Die Nutzung erfolgt auf eigene Verantwortung. Eine Haftung ist im gesetzlich zulässigen Rahmen ausgeschlossen.
-    </p>
-  </div>
+        s1_title: "1. Allgemeines",
+        s1_p1: "Diese Nutzungsbedingungen regeln die Nutzung der App MyDocuBox.",
+        s1_p2: "MyDocuBox ist eine App zur strukturierten Verwaltung persönlicher Dokumente mit lokaler Speicherung und optionaler iCloud-Synchronisation.",
+        s1_p3: "Mit der Nutzung der App erklären Sie sich mit diesen Bedingungen einverstanden.",
+        s1_p4: "Für Downloads über den Apple App Store gelten ergänzend die Apple-Bedingungen. Soweit im App Store keine abweichende individuelle Endnutzer-Lizenzvereinbarung hinterlegt ist, gilt zusätzlich die Apple Standard EULA:",
 
-  <div class="card">
-    <h2>7. Änderungen</h2>
-    <p data-i18n="s7">
-      Diese Bedingungen können jederzeit angepasst werden.
-    </p>
-  </div>
+        s2_title: "2. Lizenz und zulässige Nutzung",
+        s2_p1: "MyDocuBox wird Ihnen zur persönlichen, nicht ausschließlichen und nicht übertragbaren Nutzung im Rahmen der jeweils anwendbaren App-Store-Bedingungen bereitgestellt.",
+        s2_p2: "Nicht gestattet ist insbesondere:",
+        s2_l1: "die Nutzung der App zu rechtswidrigen Zwecken",
+        s2_l2: "die Umgehung technischer Schutzmechanismen",
+        s2_l3: "die unzulässige Vervielfältigung, Verbreitung oder Weitergabe der App",
+        s2_l4: "die Nutzung entgegen anwendbaren Plattform- oder Lizenzbedingungen",
 
-</div>
+        s3_title: "3. Zweck und Funktionsumfang",
+        s3_p1: "MyDocuBox dient der persönlichen Dokumentenorganisation, insbesondere:",
+        s3_l1: "Scannen, Import und Verwaltung von Dateien",
+        s3_l2: "Kategorisierung, Suche und Vorschau",
+        s3_l3: "OCR/Text-Erkennung und unterstützende Dokumentvorschläge",
+        s3_l4: "optionale Erinnerungsfunktionen",
+        s3_l5: "Synchronisation und Wiederherstellung über iCloud auf unterstützten Apple-Plattformen",
+        s3_p2: "Automatisch erzeugte Inhalte oder Hilfsfunktionen, insbesondere OCR-Ergebnisse, Suchtreffer, Dateinamenvorschläge, Kategorievorschläge oder Erinnerungsvorschläge, dienen nur der Unterstützung und können unvollständig oder fehlerhaft sein. Die Prüfung der inhaltlichen Richtigkeit bleibt Ihre Verantwortung.",
 
-<footer>
-  © 2026 MyDocuBox –
-  <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
-</footer>
+        s4_title: "4. Verantwortung des Nutzers",
+        s4_p1: "Die Nutzung der App erfolgt eigenverantwortlich.",
+        s4_p2: "Sie sind insbesondere selbst verantwortlich für:",
+        s4_l1: "den Schutz Ihres Geräts und Ihrer Zugangsdaten",
+        s4_l2: "die Absicherung Ihres Apple-Kontos bei Nutzung von iCloud",
+        s4_l3: "den Umgang mit sensiblen oder vertraulichen Dokumenten",
+        s4_l4: "die Prüfung von OCR-, Such-, Vorschlags- und Erinnerungsfunktionen",
+        s4_l5: "eigene Backup- und Aufbewahrungsstrategien",
+        s4_p3: "Der Entwickler hat keinen direkten Zugriff auf Ihre Dokumentinhalte.",
 
-<script>
-const translations = {
-  en: {
-    title: "Terms of Use",
-    nav_home: "Home",
-    nav_privacy: "Privacy",
-    nav_support: "Support",
+        s5_title: "5. Synchronisation und externe Infrastruktur",
+        s5_p1: "Auf unterstützten Apple-Geräten kann MyDocuBox Daten über iCloud synchronisieren, sofern iCloud Drive verfügbar und für die App aktiviert ist.",
+        s5_p2: "Die Synchronisation kann manuell ausgelöst werden und zusätzlich automatisch erfolgen, wenn die App aktiv ist.",
+        s5_p3: "Dabei gilt:",
+        s5_l1: "bei fehlender Verbindung verbleiben Änderungen zunächst lokal",
+        s5_l2: "die spätere Synchronisation hängt von Netzwerk, iCloud-Verfügbarkeit und Plattformverhalten ab",
+        s5_l3: "Konflikte können technisch nach Änderungszeitpunkt aufgelöst werden",
+        s5_l4: "Löschungen können über technische Löschmarkierungen zwischen Geräten übertragen werden",
+        s5_p4: "Die Verarbeitung in der Cloud erfolgt über Apple-Infrastruktur, nicht über eigene Server des Entwicklers.",
 
-    s1: "These terms govern the use of the MyDocuBox app.",
-    s2: "The app may only be used in accordance with applicable laws and App Store terms.",
-    s3: "MyDocuBox is designed for managing personal documents including scanning and OCR.",
-    s4: "You are responsible for your data and backups.",
-    s5: "Subscriptions renew automatically unless cancelled.",
-    s6: "Use is at your own risk. Liability is limited as permitted by law.",
-    s7: "These terms may be updated at any time."
-  }
-};
+        s6_title: "6. Kostenpflichtige Funktionen, Käufe und Abonnements",
+        s6_p1: "Bestimmte Funktionen können kostenpflichtig sein, insbesondere Pro-Funktionen, Abonnements oder einmalige Käufe.",
+        s6_p2: "Dabei gilt:",
+        s6_l1: "Käufe und Abonnements werden über den Apple App Store abgewickelt",
+        s6_l2: "Preise, Laufzeiten und enthaltene Leistungen werden vor dem Kauf in der App bzw. im Store angezeigt",
+        s6_l3: "sich automatisch verlängernde Abonnements verlängern sich automatisch, sofern sie nicht rechtzeitig über Ihre App-Store-Kontoeinstellungen gekündigt werden",
+        s6_l4: "die Verwaltung und Kündigung von Abonnements erfolgt über Ihr Apple-Konto",
+        s6_l5: "bereits erworbene Käufe können, soweit vom Store unterstützt, wiederhergestellt werden",
+        s6_p3: "Für Zahlungsabwicklung, Abrechnung, Verlängerung, Kündigung und Erstattung gelten ergänzend die Bedingungen von Apple.",
 
-function setLang(lang) {
-  localStorage.setItem("lang", lang);
-  applyLang(lang);
-}
+        s7_title: "7. Export, Teilen und Drittanbieter",
+        s7_p1: "MyDocuBox bietet Funktionen zum Export, Teilen, Drucken und Öffnen von Dokumenten in anderen Apps oder Diensten.",
+        s7_p2: "Wenn Dateien an externe Apps, Cloud-Dienste, E-Mail-Dienste oder andere Drittanbieter weitergegeben werden, erfolgt dies ausschließlich auf Ihre Initiative.",
+        s7_p3: "Für die Verarbeitung durch diese Drittanbieter gelten ausschließlich deren eigene Bedingungen und Datenschutzbestimmungen.",
 
-function applyLang(lang) {
-  const t = translations[lang];
-  if (!t) return;
+        s8_title: "8. Verfügbarkeit und Änderungen",
+        s8_p1: "Es besteht kein Anspruch auf eine bestimmte Verfügbarkeit, einen jederzeit fehlerfreien Betrieb oder einen unveränderten Funktionsumfang der App.",
+        s8_p2: "Der Entwickler kann Funktionen anpassen, erweitern, einschränken oder entfernen, sofern keine zwingenden gesetzlichen Rechte entgegenstehen.",
+        s8_p3: "Dies betrifft insbesondere:",
+        s8_l1: "Änderungen einzelner Pro-Funktionen",
+        s8_l2: "technische Anpassungen an Betriebssysteme oder Store-Vorgaben",
+        s8_l3: "Einschränkungen aufgrund von iCloud-, App-Store- oder Plattformänderungen",
 
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (t[key]) el.textContent = t[key];
-  });
+        s9_title: "9. Gewährleistung und Haftung",
+        s9_p1: "MyDocuBox wird im gesetzlich zulässigen Rahmen als digitales Organisationswerkzeug bereitgestellt.",
+        s9_p2: "Der Entwickler übernimmt insbesondere keine Gewähr dafür, dass:",
+        s9_l1: "die App jederzeit unterbrechungsfrei oder fehlerfrei verfügbar ist",
+        s9_l2: "Synchronisation, OCR, Suche, Erinnerungen oder Vorschlagsfunktionen stets vollständig oder korrekt arbeiten",
+        s9_l3: "Datenverluste durch Gerätefehler, Betriebssystemänderungen, iCloud-Störungen, Plattformänderungen oder unsachgemäße Nutzung ausgeschlossen sind",
+        s9_p3: "Soweit gesetzlich zulässig, ist die Haftung des Entwicklers für einfache Fahrlässigkeit ausgeschlossen.",
+        s9_p4: "Unberührt bleiben zwingende gesetzliche Ansprüche, insbesondere bei Vorsatz, grober Fahrlässigkeit, Verletzung von Leben, Körper oder Gesundheit sowie in sonstigen Fällen zwingender gesetzlicher Haftung.",
+        s9_p5: "MyDocuBox ersetzt keine rechtliche, steuerliche, medizinische oder finanzielle Beratung.",
 
-  document.getElementById("btn-de").classList.toggle("active", lang === "de");
-  document.getElementById("btn-en").classList.toggle("active", lang === "en");
-}
+        s10_title: "10. Geistiges Eigentum",
+        s10_p1: "Alle Rechte an der App, am Design, an der Marke, an Inhalten der App und am Quellcode verbleiben beim Entwickler oder bei den jeweils berechtigten Rechteinhabern.",
+        s10_p2: "Die Nutzung der App ist nur im Rahmen dieser Nutzungsbedingungen und der anwendbaren App-Store-Lizenzbedingungen zulässig.",
 
-const saved = localStorage.getItem("lang") || "de";
-applyLang(saved);
-</script>
+        s11_title: "11. Beendigung der Nutzung und Daten",
+        s11_p1: "Sie können die Nutzung der App jederzeit durch Deinstallation beenden.",
+        s11_p2: "Beim Entfernen der App werden lokale App-Daten auf dem jeweiligen Gerät entfernt, soweit das Betriebssystem dies vorsieht.",
+        s11_p3: "iCloud-Daten unterliegen zusätzlich Ihren iCloud-Einstellungen und den Bedingungen von Apple.",
 
+        s12_title: "12. Änderungen der Nutzungsbedingungen",
+        s12_p1: "Diese Nutzungsbedingungen können bei zukünftigen Versionen der App angepasst werden.",
+        s12_p2: "Die jeweils aktuelle Version ist in der App einsehbar.",
+
+        summary_title: "Kurzfassung:",
+        summary_p1: "MyDocuBox hilft bei der Dokumentenorganisation, speichert Daten standardmäßig lokal und synchronisiert optional über iCloud.",
+        summary_p2: "Pro-Funktionen können kostenpflichtig sein und werden über den App Store abgewickelt.",
+        summary_p3: "Für Ihre Dokumente, deren Prüfung und Ihre Backup-Strategie bleiben Sie selbst verantwortlich.",
+
+        footer_privacy: "Datenschutzerklärung",
+        footer_terms: "Nutzungsbedingungen",
+        footer_support: "Support",
+        footer_imprint: "Impressum"
+      },
+
+      en: {
+        page_title: "Terms of Use – MyDocuBox",
+        meta_description: "Terms of Use of MyDocuBox – legal information about using the app.",
+        og_title: "Terms of Use – MyDocuBox",
+        og_description: "Legal information about using the MyDocuBox app.",
+
+        nav_home: "Home",
+        nav_privacy: "Privacy Policy",
+        nav_terms: "Terms of Use",
+        nav_support: "Support",
+        nav_imprint: "Imprint",
+
+        page_heading: "Terms of Use",
+        meta_date: "Last updated: 03/15/2026",
+
+        s1_title: "1. General",
+        s1_p1: "These Terms of Use govern the use of the MyDocuBox app.",
+        s1_p2: "MyDocuBox is an app for the structured management of personal documents with local storage and optional iCloud synchronization.",
+        s1_p3: "By using the app, you agree to these terms.",
+        s1_p4: "For downloads via the Apple App Store, Apple’s terms also apply. Unless a separate individual end-user license agreement is provided in the App Store, the Apple Standard EULA also applies:",
+
+        s2_title: "2. License and permitted use",
+        s2_p1: "MyDocuBox is provided to you for personal, non-exclusive and non-transferable use within the scope of the applicable App Store terms.",
+        s2_p2: "In particular, the following is not permitted:",
+        s2_l1: "using the app for unlawful purposes",
+        s2_l2: "circumventing technical protection mechanisms",
+        s2_l3: "unauthorized copying, distribution or transfer of the app",
+        s2_l4: "use contrary to applicable platform or license terms",
+
+        s3_title: "3. Purpose and scope of functions",
+        s3_p1: "MyDocuBox is intended for personal document organization, in particular:",
+        s3_l1: "scanning, importing and managing files",
+        s3_l2: "categorization, search and preview",
+        s3_l3: "OCR/text recognition and supportive document suggestions",
+        s3_l4: "optional reminder functions",
+        s3_l5: "synchronization and recovery via iCloud on supported Apple platforms",
+        s3_p2: "Automatically generated content or helper functions, in particular OCR results, search hits, file name suggestions, category suggestions or reminder suggestions, are provided for support only and may be incomplete or incorrect. Verifying the factual correctness remains your responsibility.",
+
+        s4_title: "4. User responsibility",
+        s4_p1: "You use the app at your own responsibility.",
+        s4_p2: "In particular, you are responsible for:",
+        s4_l1: "protecting your device and access data",
+        s4_l2: "securing your Apple account when using iCloud",
+        s4_l3: "handling sensitive or confidential documents",
+        s4_l4: "reviewing OCR, search, suggestion and reminder functions",
+        s4_l5: "your own backup and retention strategies",
+        s4_p3: "The developer has no direct access to your document contents.",
+
+        s5_title: "5. Synchronization and external infrastructure",
+        s5_p1: "On supported Apple devices, MyDocuBox can synchronize data via iCloud if iCloud Drive is available and enabled for the app.",
+        s5_p2: "Synchronization can be triggered manually and may also occur automatically while the app is active.",
+        s5_p3: "The following applies:",
+        s5_l1: "if no connection is available, changes initially remain local",
+        s5_l2: "later synchronization depends on network, iCloud availability and platform behavior",
+        s5_l3: "conflicts may be technically resolved based on the modification timestamp",
+        s5_l4: "deletions may be transferred between devices using technical deletion markers",
+        s5_p4: "Processing in the cloud takes place via Apple infrastructure, not via the developer’s own servers.",
+
+        s6_title: "6. Paid features, purchases and subscriptions",
+        s6_p1: "Certain features may be subject to payment, in particular Pro features, subscriptions or one-time purchases.",
+        s6_p2: "The following applies:",
+        s6_l1: "purchases and subscriptions are processed via the Apple App Store",
+        s6_l2: "prices, durations and included services are displayed before purchase in the app and/or in the store",
+        s6_l3: "auto-renewing subscriptions renew automatically unless cancelled in time via your App Store account settings",
+        s6_l4: "subscription management and cancellation take place via your Apple account",
+        s6_l5: "purchases already made may be restorable where supported by the store",
+        s6_p3: "Apple’s terms also apply to payment processing, billing, renewal, cancellation and refunds.",
+
+        s7_title: "7. Export, sharing and third parties",
+        s7_p1: "MyDocuBox offers functions for exporting, sharing, printing and opening documents in other apps or services.",
+        s7_p2: "If files are transferred to external apps, cloud services, email services or other third parties, this occurs solely on your initiative.",
+        s7_p3: "The processing by these third parties is governed exclusively by their own terms and privacy policies.",
+
+        s8_title: "8. Availability and changes",
+        s8_p1: "There is no entitlement to a specific availability, uninterrupted error-free operation or an unchanged scope of functions of the app.",
+        s8_p2: "The developer may adapt, extend, restrict or remove functions, unless mandatory legal rights prevent this.",
+        s8_p3: "This applies in particular to:",
+        s8_l1: "changes to individual Pro features",
+        s8_l2: "technical adjustments to operating systems or store requirements",
+        s8_l3: "restrictions due to iCloud, App Store or platform changes",
+
+        s9_title: "9. Warranty and liability",
+        s9_p1: "MyDocuBox is provided within the legally permissible scope as a digital organization tool.",
+        s9_p2: "In particular, the developer does not warrant that:",
+        s9_l1: "the app will always be available without interruption or error",
+        s9_l2: "synchronization, OCR, search, reminders or suggestion functions will always work completely or correctly",
+        s9_l3: "data loss caused by device failures, operating system changes, iCloud issues, platform changes or improper use can be ruled out",
+        s9_p3: "To the extent permitted by law, the developer’s liability for simple negligence is excluded.",
+        s9_p4: "Mandatory legal claims remain unaffected, in particular in cases of intent, gross negligence, injury to life, body or health, and in other cases of mandatory statutory liability.",
+        s9_p5: "MyDocuBox does not replace legal, tax, medical or financial advice.",
+
+        s10_title: "10. Intellectual property",
+        s10_p1: "All rights to the app, its design, brand, app content and source code remain with the developer or the respective rights holders.",
+        s10_p2: "Use of the app is only permitted within the scope of these Terms of Use and the applicable App Store license terms.",
+
+        s11_title: "11. Termination of use and data",
+        s11_p1: "You may stop using the app at any time by uninstalling it.",
+        s11_p2: "When removing the app, local app data on the respective device is removed to the extent provided by the operating system.",
+        s11_p3: "iCloud data is additionally subject to your iCloud settings and Apple’s terms.",
+
+        s12_title: "12. Changes to these Terms of Use",
+        s12_p1: "These Terms of Use may be adjusted in future versions of the app.",
+        s12_p2: "The current version can be viewed in the app.",
+
+        summary_title: "Summary:",
+        summary_p1: "MyDocuBox helps organize documents, stores data locally by default and optionally synchronizes via iCloud.",
+        summary_p2: "Pro features may be subject to payment and are processed via the App Store.",
+        summary_p3: "You remain responsible for your documents, their review and your backup strategy.",
+
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms of Use",
+        footer_support: "Support",
+        footer_imprint: "Imprint"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.de;
+
+      document.documentElement.lang = lang;
+      document.title = t.page_title;
+
+      document.querySelector('meta[name="description"]').setAttribute("content", t.meta_description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.og_description);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+
+    function setLang(lang) {
+      localStorage.setItem("mydocubox_lang", lang);
+      applyLang(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get("lang");
+    const savedLang = localStorage.getItem("mydocubox_lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+    const initialLang = (paramLang === "de" || paramLang === "en") ? paramLang : (savedLang || browserLang);
+
+    applyLang(initialLang);
+  </script>
 </body>
 </html>
