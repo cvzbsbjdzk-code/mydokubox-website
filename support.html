@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – MyDocuBox</title>
+
+  <meta name="description" content="Support für MyDocuBox – Hilfe, Kontakt und Supportinformationen für Nutzer der App.">
+  <meta property="og:title" content="Support – MyDocuBox">
+  <meta property="og:description" content="Kontaktiere den Support von MyDocuBox bei Fragen oder Problemen mit der App.">
+  <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
+  <meta property="og:url" content="https://mydocubox.app/support.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/mydocubox16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="alternate" hreflang="de" href="https://mydocubox.app/support.html">
+  <link rel="alternate" hreflang="en" href="https://mydocubox.app/support.html?lang=en">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      background: #0a1f44;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4da3ff;
+      font-weight: 500;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 12px;
+    }
+
+    .lang-switch button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lang-switch button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px 20px 70px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 10px 0 35px 0;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
+    }
+
+    .meta {
+      color: #9fb7ff;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffd84d, #ffcc00);
+      color: #0a1f44;
+      padding: 35px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .card h2,
+    .card h3,
+    .card p,
+    .card li,
+    .card strong,
+    .card code {
+      color: #0a1f44;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+      border-bottom: 1px solid rgba(10, 31, 68, 0.15);
+      padding-bottom: 8px;
+    }
+
+    .card h3 {
+      margin-top: 24px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 12px 0;
+    }
+
+    .card ul {
+      margin: 10px 0 16px 22px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
+    .summary {
+      margin-top: 10px;
+      padding: 18px 20px;
+      background: rgba(10, 31, 68, 0.08);
+      border-left: 4px solid #0a1f44;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 50px 20px;
+      color: #8ea4d6;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .support-mail:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      font-size: 0.96rem;
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Startseite</a>
+      <a href="Datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+      <a href="support.html" data-i18n="nav_support">Support</a>
+
+      <div class="lang-switch">
+        <button id="btn-de" onclick="setLang('de')">DE</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1 data-i18n="page_heading">Support</h1>
+      <p class="meta" data-i18n="meta_date">Stand: 18.03.2026</p>
+    </section>
+
+    <div class="card">
+      <h2 data-i18n="s1_title">1. Kontakt</h2>
+      <p data-i18n="s1_p1">
+        Wenn Sie Fragen, technische Probleme oder Feedback zu MyDocuBox haben, kontaktieren Sie uns bitte per E-Mail.
+      </p>
+      <p>
+        <strong data-i18n="s1_email_label">E-Mail:</strong>
+        <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+      </p>
+      <p class="note" data-i18n="s1_p2">
+        Wir bemühen uns, Anfragen so schnell wie möglich zu beantworten.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s2_title">2. Wobei wir helfen können</h2>
+      <ul>
+        <li data-i18n="s2_l1">Probleme beim Importieren oder Öffnen von Dokumenten</li>
+        <li data-i18n="s2_l2">Fragen zu Kategorien, Suche oder OCR-Funktionen</li>
+        <li data-i18n="s2_l3">Probleme mit Synchronisation oder lokal gespeicherten Daten</li>
+        <li data-i18n="s2_l4">Fragen zu Pro-Funktionen, Käufen oder Abonnements</li>
+        <li data-i18n="s2_l5">Allgemeines Feedback und Verbesserungsvorschläge</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s3_title">3. Bitte in Ihrer Anfrage angeben</h2>
+      <p data-i18n="s3_p1">
+        Damit wir Ihnen schneller helfen können, beschreiben Sie Ihr Problem bitte möglichst genau.
+      </p>
+      <ul>
+        <li data-i18n="s3_l1">Gerätemodell</li>
+        <li data-i18n="s3_l2">iOS- oder iPadOS-Version</li>
+        <li data-i18n="s3_l3">App-Version von MyDocuBox</li>
+        <li data-i18n="s3_l4">kurze Beschreibung des Problems</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s4_title">4. Datenschutz beim Support</h2>
+      <p data-i18n="s4_p1">
+        Bitte senden Sie uns keine sensiblen Dokumentinhalte per E-Mail, sofern dies nicht unbedingt erforderlich ist.
+      </p>
+      <p data-i18n="s4_p2">
+        Allgemeine Informationen zur Datenverarbeitung finden Sie in unserer Datenschutzerklärung.
+      </p>
+      <p>
+        <a class="support-mail" href="Datenschutz.html" data-i18n="s4_link">Zur Datenschutzerklärung</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="s5_title">5. Häufige Hinweise</h2>
+      <h3 data-i18n="s5_h1">Dokument wird nicht angezeigt</h3>
+      <p data-i18n="s5_p1">
+        Bitte starten Sie die App erneut und prüfen Sie, ob die Datei vollständig importiert wurde.
+      </p>
+
+      <h3 data-i18n="s5_h2">Kauf oder Abo wird nicht erkannt</h3>
+      <p data-i18n="s5_p2">
+        Stellen Sie sicher, dass Sie mit derselben Apple-ID angemeldet sind, mit der der Kauf durchgeführt wurde.
+      </p>
+
+      <h3 data-i18n="s5_h3">Synchronisation erscheint verzögert</h3>
+      <p data-i18n="s5_p3">
+        Prüfen Sie Ihre iCloud-Verbindung und öffnen Sie die App auf dem betroffenen Gerät erneut.
+      </p>
+
+      <div class="summary">
+        <p><strong data-i18n="summary_title">Kurz gesagt:</strong></p>
+        <p data-i18n="summary_p1">Für Support reicht eine E-Mail an support@mydocubox.app.</p>
+        <p data-i18n="summary_p2">Bitte beschreiben Sie das Problem möglichst klar.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 MyDocuBox –
+    <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+    <a href="Datenschutz.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+    <a href="support.html" data-i18n="footer_support">Support</a>
+  </footer>
+
+  <script>
+    const translations = {
+      de: {
+        page_title: "Support – MyDocuBox",
+        meta_description: "Support für MyDocuBox – Hilfe, Kontakt und Supportinformationen für Nutzer der App.",
+        og_title: "Support – MyDocuBox",
+        og_description: "Kontaktiere den Support von MyDocuBox bei Fragen oder Problemen mit der App.",
+
+        nav_home: "Startseite",
+        nav_privacy: "Datenschutz",
+        nav_imprint: "Impressum",
+        nav_support: "Support",
+
+        page_heading: "Support",
+        meta_date: "Stand: 18.03.2026",
+
+        s1_title: "1. Kontakt",
+        s1_p1: "Wenn Sie Fragen, technische Probleme oder Feedback zu MyDocuBox haben, kontaktieren Sie uns bitte per E-Mail.",
+        s1_email_label: "E-Mail:",
+        s1_p2: "Wir bemühen uns, Anfragen so schnell wie möglich zu beantworten.",
+
+        s2_title: "2. Wobei wir helfen können",
+        s2_l1: "Probleme beim Importieren oder Öffnen von Dokumenten",
+        s2_l2: "Fragen zu Kategorien, Suche oder OCR-Funktionen",
+        s2_l3: "Probleme mit Synchronisation oder lokal gespeicherten Daten",
+        s2_l4: "Fragen zu Pro-Funktionen, Käufen oder Abonnements",
+        s2_l5: "Allgemeines Feedback und Verbesserungsvorschläge",
+
+        s3_title: "3. Bitte in Ihrer Anfrage angeben",
+        s3_p1: "Damit wir Ihnen schneller helfen können, beschreiben Sie Ihr Problem bitte möglichst genau.",
+        s3_l1: "Gerätemodell",
+        s3_l2: "iOS- oder iPadOS-Version",
+        s3_l3: "App-Version von MyDocuBox",
+        s3_l4: "kurze Beschreibung des Problems",
+
+        s4_title: "4. Datenschutz beim Support",
+        s4_p1: "Bitte senden Sie uns keine sensiblen Dokumentinhalte per E-Mail, sofern dies nicht unbedingt erforderlich ist.",
+        s4_p2: "Allgemeine Informationen zur Datenverarbeitung finden Sie in unserer Datenschutzerklärung.",
+        s4_link: "Zur Datenschutzerklärung",
+
+        s5_title: "5. Häufige Hinweise",
+        s5_h1: "Dokument wird nicht angezeigt",
+        s5_p1: "Bitte starten Sie die App erneut und prüfen Sie, ob die Datei vollständig importiert wurde.",
+        s5_h2: "Kauf oder Abo wird nicht erkannt",
+        s5_p2: "Stellen Sie sicher, dass Sie mit derselben Apple-ID angemeldet sind, mit der der Kauf durchgeführt wurde.",
+        s5_h3: "Synchronisation erscheint verzögert",
+        s5_p3: "Prüfen Sie Ihre iCloud-Verbindung und öffnen Sie die App auf dem betroffenen Gerät erneut.",
+
+        summary_title: "Kurz gesagt:",
+        summary_p1: "Für Support reicht eine E-Mail an support@mydocubox.app.",
+        summary_p2: "Bitte beschreiben Sie das Problem möglichst klar.",
+
+        footer_privacy: "Datenschutzerklärung",
+        footer_imprint: "Impressum",
+        footer_support: "Support"
+      },
+
+      en: {
+        page_title: "Support – MyDocuBox",
+        meta_description: "Support for MyDocuBox – help, contact and support information for app users.",
+        og_title: "Support – MyDocuBox",
+        og_description: "Contact MyDocuBox support for questions or problems with the app.",
+
+        nav_home: "Home",
+        nav_privacy: "Privacy",
+        nav_imprint: "Imprint",
+        nav_support: "Support",
+
+        page_heading: "Support",
+        meta_date: "Last updated: 03/18/2026",
+
+        s1_title: "1. Contact",
+        s1_p1: "If you have questions, technical problems or feedback regarding MyDocuBox, please contact us by email.",
+        s1_email_label: "Email:",
+        s1_p2: "We aim to respond to requests as quickly as possible.",
+
+        s2_title: "2. What we can help with",
+        s2_l1: "Problems importing or opening documents",
+        s2_l2: "Questions about categories, search or OCR features",
+        s2_l3: "Problems with synchronization or locally stored data",
+        s2_l4: "Questions about Pro features, purchases or subscriptions",
+        s2_l5: "General feedback and suggestions for improvement",
+
+        s3_title: "3. Please include in your request",
+        s3_p1: "To help you faster, please describe your issue as clearly as possible.",
+        s3_l1: "device model",
+        s3_l2: "iOS or iPadOS version",
+        s3_l3: "MyDocuBox app version",
+        s3_l4: "short description of the issue",
+
+        s4_title: "4. Privacy when contacting support",
+        s4_p1: "Please do not send sensitive document contents by email unless this is absolutely necessary.",
+        s4_p2: "General information about data processing can be found in our privacy policy.",
+        s4_link: "Go to Privacy Policy",
+
+        s5_title: "5. Common notes",
+        s5_h1: "Document is not displayed",
+        s5_p1: "Please restart the app and check whether the file was fully imported.",
+        s5_h2: "Purchase or subscription is not recognized",
+        s5_p2: "Make sure you are signed in with the same Apple ID that was used for the purchase.",
+        s5_h3: "Synchronization seems delayed",
+        s5_p3: "Please check your iCloud connection and reopen the app on the affected device.",
+
+        summary_title: "In short:",
+        summary_p1: "For support, an email to support@mydocubox.app is sufficient.",
+        summary_p2: "Please describe the issue as clearly as possible.",
+
+        footer_privacy: "Privacy Policy",
+        footer_imprint: "Imprint",
+        footer_support: "Support"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.de;
+
+      document.documentElement.lang = lang;
+      document.title = t.page_title;
+
+      document.querySelector('meta[name="description"]').setAttribute("content", t.meta_description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.og_description);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+
+    function setLang(lang) {
+      localStorage.setItem("mydocubox_lang", lang);
+      applyLang(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get("lang");
+    const savedLang = localStorage.getItem("mydocubox_lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+    const initialLang = (paramLang === "de" || paramLang === "en") ? paramLang : (savedLang || browserLang);
+
+    applyLang(initialLang);
+  </script>
+</body>
+</html>
