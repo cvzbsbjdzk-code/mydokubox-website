@@ -12,11 +12,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/mydocubox16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  
+
   <link rel="alternate" hreflang="de" href="https://mydocubox.app/">
   <link rel="alternate" hreflang="en" href="https://mydocubox.app/?lang=en">
 
-  <meta name="description" content="MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, verschlüsselt und einfach.">
+  <meta name="description" content="MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, lokal und einfach.">
   <meta property="og:title" content="MyDocuBox – Dein Dokumenten Scanner und sicherer Dokumenten Tresor">
   <meta property="og:description" content="Scanne, speichere und organisiere deine Dokumente sicher und privat.">
   <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
@@ -100,6 +100,8 @@
       width: 240px;
       margin-bottom: 6px;
       filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+      max-width: 90%;
+      height: auto;
     }
 
     .hero h1 {
@@ -159,6 +161,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.35);
     }
 
+    .card h2,
     .card p,
     .card ul,
     .card li {
@@ -195,6 +198,24 @@
     .support-mail:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 45px 20px;
+      }
+
+      .card {
+        padding: 26px;
+      }
+    }
   </style>
 </head>
 
@@ -206,7 +227,8 @@
       <a href="#support" data-i18n="nav_support">Support</a>
       <a href="privacy.html" data-i18n="nav_privacy">Datenschutz</a>
       <a href="terms.html" data-i18n="nav_terms">Nutzungsbedingungen</a>
-      
+      <a href="support.html" data-i18n="nav_support_page">Support-Seite</a>
+
       <div class="lang-switch">
         <button id="btn-de" onclick="setLang('de')">DE</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
@@ -287,8 +309,7 @@
     <div class="card">
       <h2 data-i18n="security2_title">☁️ Automatische iCloud-Synchronisierung</h2>
       <p data-i18n="security2_text1">
-        Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien
-        automatisch über deinen persönlichen iCloud-Speicher synchronisiert.
+        Wenn iCloud aktiviert ist, werden deine Dateien automatisch über deinen persönlichen iCloud-Speicher synchronisiert.
       </p>
       <p data-i18n="security2_text2">
         Die Daten bleiben innerhalb deines Apple-Ökosystems.
@@ -325,13 +346,18 @@
         <span data-i18n="support_text">Schreib uns direkt an:</span>
         <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
       </p>
+      <p>
+        <a class="support-mail" href="support.html" data-i18n="support_page_link">Zur Support-Seite</a>
+      </p>
     </div>
   </section>
 
   <footer>
     © 2026 MyDocuBox –
     <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
-    <a href="Datenschutz.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="privacy.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="terms.html" data-i18n="footer_terms">Nutzungsbedingungen</a>
+    <a href="support.html" data-i18n="footer_support">Support</a>
     <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
   </footer>
 
@@ -339,7 +365,7 @@
     const translations = {
       de: {
         page_title: "MyDocuBox – Dein Dokumenten Scanner und Tresor",
-        meta_description: "MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, verschlüsselt und einfach.",
+        meta_description: "MyDocuBox ist eine sichere App zum Scannen, Speichern und Organisieren deiner Dokumente. Privat, lokal und einfach.",
         og_title: "MyDocuBox – Dein Dokumenten Scanner und sicherer Dokumenten Tresor",
         og_description: "Scanne, speichere und organisiere deine Dokumente sicher und privat.",
 
@@ -348,6 +374,7 @@
         nav_support: "Support",
         nav_privacy: "Datenschutz",
         nav_terms: "Nutzungsbedingungen",
+        nav_support_page: "Support-Seite",
 
         hero_text: "Organisiere, sichere und finde deine Dokumente in Sekunden – 100% privat. 100% unter deiner Kontrolle.",
         hero_note: "Keine Datensammlung. Kein Tracking. Kein Profiling.",
@@ -369,7 +396,7 @@
         security1_text2: "Keine Server-Abhängigkeit. Keine externe Analyse.",
 
         security2_title: "☁️ Automatische iCloud-Synchronisierung",
-        security2_text1: "Wenn iCloud aktiviert ist, werden deine verschlüsselten Dateien automatisch über deinen persönlichen iCloud-Speicher synchronisiert.",
+        security2_text1: "Wenn iCloud aktiviert ist, werden deine Dateien automatisch über deinen persönlichen iCloud-Speicher synchronisiert.",
         security2_text2: "Die Daten bleiben innerhalb deines Apple-Ökosystems. Wir haben keinen Zugriff auf deine Inhalte.",
 
         security3_title: "🛡 Biometrische App-Sperre",
@@ -386,13 +413,17 @@
         support_title: "Support kontaktieren",
         support_time: "Antwortzeit: 24–48 Stunden",
         support_text: "Schreib uns direkt an:",
+        support_page_link: "Zur Support-Seite",
+
         footer_privacy: "Datenschutzerklärung",
+        footer_terms: "Nutzungsbedingungen",
+        footer_support: "Support",
         footer_imprint: "Impressum"
       },
 
       en: {
         page_title: "MyDocuBox – Your document scanner and vault",
-        meta_description: "MyDocuBox is a secure app for scanning, storing and organizing your documents. Private, encrypted and simple.",
+        meta_description: "MyDocuBox is a secure app for scanning, storing and organizing your documents. Private, local and simple.",
         og_title: "MyDocuBox – Your secure document scanner and private document vault",
         og_description: "Scan, store and organize your documents securely and privately.",
 
@@ -400,7 +431,8 @@
         nav_security: "Security",
         nav_support: "Support",
         nav_privacy: "Privacy Policy",
-        nac_terms: "Terms of Use"
+        nav_terms: "Terms of Use",
+        nav_support_page: "Support Page",
 
         hero_text: "Organize, protect and find your documents in seconds – 100% private. 100% under your control.",
         hero_note: "No data collection. No tracking. No profiling.",
@@ -422,7 +454,7 @@
         security1_text2: "No server dependency. No external analysis.",
 
         security2_title: "☁️ Automatic iCloud sync",
-        security2_text1: "If iCloud is enabled, your encrypted files are automatically synced through your personal iCloud storage.",
+        security2_text1: "If iCloud is enabled, your files are automatically synced through your personal iCloud storage.",
         security2_text2: "Your data stays inside your Apple ecosystem. We do not have access to your content.",
 
         security3_title: "🛡 Biometric app lock",
@@ -439,7 +471,11 @@
         support_title: "Contact support",
         support_time: "Response time: 24–48 hours",
         support_text: "Write to us directly:",
+        support_page_link: "Go to support page",
+
         footer_privacy: "Privacy Policy",
+        footer_terms: "Terms of Use",
+        footer_support: "Support",
         footer_imprint: "Imprint"
       }
     };
@@ -474,7 +510,7 @@
     const paramLang = params.get("lang");
     const savedLang = localStorage.getItem("mydocubox_lang");
     const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
-    const initialLang = paramLang === "de" || paramLang === "en" ? paramLang : (savedLang || browserLang);
+    const initialLang = (paramLang === "de" || paramLang === "en") ? paramLang : (savedLang || browserLang);
 
     applyLang(initialLang);
   </script>
