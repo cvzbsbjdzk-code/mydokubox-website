@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutzungsbedingungen – MyDocuBox</title>
 
+  <meta name="description" content="Nutzungsbedingungen von MyDocuBox – rechtliche Hinweise zur Nutzung der App.">
+  <meta property="og:title" content="Terms of Use – MyDocuBox">
+  <meta property="og:description" content="Terms of Use for MyDocuBox – legal information about using the app.">
+  <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
+  <meta property="og:url" content="https://mydocubox.app/terms.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      background: #0a1f44;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4da3ff;
+      font-weight: 500;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 12px;
+    }
+
+    .lang-switch button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lang-switch button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px 20px 70px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 10px 0 35px 0;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffd84d, #ffcc00);
+      color: #0a1f44;
+      padding: 35px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+    }
+
+    .card h2, .card p, .card li {
+      color: #0a1f44;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #8ea4d6;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Startseite</a>
+    <a href="Datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+    <a href="support.html" data-i18n="nav_support">Support</a>
+
+    <div class="lang-switch">
+      <button id="btn-de" onclick="setLang('de')">DE</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="hero">
+    <h1 data-i18n="title">Nutzungsbedingungen</h1>
+  </section>
+
+  <div class="card">
+    <h2>1. Allgemeines</h2>
+    <p data-i18n="s1">
+      Diese Nutzungsbedingungen regeln die Nutzung der App MyDocuBox.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. Nutzung</h2>
+    <p data-i18n="s2">
+      Die App darf nur im Rahmen der geltenden Gesetze und App-Store-Bedingungen genutzt werden.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>3. Funktionen</h2>
+    <p data-i18n="s3">
+      MyDocuBox dient der Organisation persönlicher Dokumente, einschließlich Scan, OCR und Speicherung.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>4. Verantwortung</h2>
+    <p data-i18n="s4">
+      Sie sind für Ihre Daten und deren Sicherung selbst verantwortlich.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>5. Abonnements</h2>
+    <p data-i18n="s5">
+      Abonnements verlängern sich automatisch, sofern sie nicht gekündigt werden.
+    </p>
+    <p>
+      <a class="support-mail" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
+        Apple Standard EULA
+      </a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>6. Haftung</h2>
+    <p data-i18n="s6">
+      Die Nutzung erfolgt auf eigene Verantwortung. Eine Haftung ist im gesetzlich zulässigen Rahmen ausgeschlossen.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>7. Änderungen</h2>
+    <p data-i18n="s7">
+      Diese Bedingungen können jederzeit angepasst werden.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 MyDocuBox –
+  <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    title: "Terms of Use",
+    nav_home: "Home",
+    nav_privacy: "Privacy",
+    nav_support: "Support",
+
+    s1: "These terms govern the use of the MyDocuBox app.",
+    s2: "The app may only be used in accordance with applicable laws and App Store terms.",
+    s3: "MyDocuBox is designed for managing personal documents including scanning and OCR.",
+    s4: "You are responsible for your data and backups.",
+    s5: "Subscriptions renew automatically unless cancelled.",
+    s6: "Use is at your own risk. Liability is limited as permitted by law.",
+    s7: "These terms may be updated at any time."
+  }
+};
+
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (t[key]) el.textContent = t[key];
+  });
+
+  document.getElementById("btn-de").classList.toggle("active", lang === "de");
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+}
+
+const saved = localStorage.getItem("lang") || "de";
+applyLang(saved);
+</script>
+
+</body>
+</html>
