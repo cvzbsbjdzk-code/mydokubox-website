@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=6760269404">
+
+  <title>MyDocuBox – Häufig gestellte Fragen</title>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/mydocubox32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/mydocubox16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="alternate" hreflang="de" href="https://mydocubox.app/faq.html">
+  <link rel="alternate" hreflang="en" href="https://mydocubox.app/faq.html?lang=en">
+
+  <meta name="description" content="Antworten auf häufig gestellte Fragen zu MyDocuBox – Speicherort, Suche, Erinnerungen, Datenschutz, Export und unterstützte Dateiformate.">
+  <meta property="og:title" content="MyDocuBox – FAQ">
+  <meta property="og:description" content="Alles Wichtige zu Speicherung, Suche, Erinnerungen, Sicherheit und unterstützten Dateiformaten in MyDocuBox.">
+  <meta property="og:image" content="https://mydocubox.app/mydocubox.png">
+  <meta property="og:url" content="https://mydocubox.app/faq.html">
+  <meta property="og:type" content="website">
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a1f44;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4da3ff;
+      font-weight: 500;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 12px;
+    }
+
+    .lang-switch button {
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lang-switch button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 50px 20px;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 8px;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+      max-width: 85%;
+      height: auto;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #cbd6f0;
+      font-size: 18px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px 70px 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffd84d, #ffcc00);
+      color: #0a1f44;
+      padding: 30px;
+      border-radius: 18px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .card h2,
+    .card p,
+    .card ul,
+    .card li {
+      color: #0a1f44;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .formats-list {
+      margin: 14px 0 0 0;
+      padding-left: 22px;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #8ea4d6;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .support-mail {
+      color: #4da3ff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .support-mail:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .card h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Startseite</a>
+      <a href="index.html#features" data-i18n="nav_features">Funktionen</a>
+      <a href="index.html#security" data-i18n="nav_security">Sicherheit</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Datenschutz</a>
+      <a href="terms.html" data-i18n="nav_terms">Nutzungsbedingungen</a>
+      <a href="support.html" data-i18n="nav_support">Support</a>
+
+      <div class="lang-switch">
+        <button id="btn-de" onclick="setLang('de')">DE</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="84CE5652-8DB2-4D16-A279-95500E546CAC.png" alt="MyDocuBox Logo" class="hero-logo">
+    <h1 data-i18n="hero_title">Häufig gestellte Fragen</h1>
+    <p data-i18n="hero_text">
+      Alles Wichtige zu Speicherung, Suche, Erinnerungen, Datenschutz,
+      Dateiformaten und Export – kompakt erklärt.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <h2 data-i18n="faq1_q">Wo werden meine Dokumente gespeichert?</h2>
+      <p data-i18n="faq1_a">
+        Standardmäßig werden alle Dokumente lokal auf deinem Gerät gespeichert.
+        Du behältst jederzeit die Kontrolle über deine Daten. Optional kannst du
+        iCloud aktivieren, um deine Dokumente auf deinen Apple-Geräten zu synchronisieren.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq2_q">Wie finde ich meine Dokumente wieder?</h2>
+      <p data-i18n="faq2_a">
+        MyDocuBox verfügt über eine leistungsstarke Suchfunktion. Du kannst nicht
+        nur nach Dateinamen suchen, sondern auch Inhalte innerhalb deiner Dokumente
+        schnell wiederfinden.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq3_q">Gibt es eine Wiedervorlage oder Erinnerungsfunktion?</h2>
+      <p data-i18n="faq3_a">
+        Ja. Du kannst für Dokumente individuelle Erinnerungen anlegen, damit du
+        wichtige Fristen, Zahlungstermine oder Kündigungsdaten nicht verpasst.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq4_q">Was bedeutet „Intelligente Offline-Erkennung“?</h2>
+      <p data-i18n="faq4_a">
+        MyDocuBox analysiert Texte, Dateinamen und Kategorien direkt auf deinem Gerät.
+        Die Verarbeitung erfolgt lokal, sodass deine privaten Dokumente nicht zur Analyse
+        auf externe Server hochgeladen werden.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq5_q">Kann ich meine Daten wieder exportieren?</h2>
+      <p data-i18n="faq5_a">
+        Ja, selbstverständlich. Du kannst einzelne Dokumente oder mehrere Dateien gesammelt
+        exportieren und deine Daten jederzeit sichern oder weiterverwenden.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq6_q">Was passiert, wenn ich eine Kategorie lösche?</h2>
+      <p data-i18n="faq6_a">
+        Eine Kategorie kann nur gelöscht werden, wenn ihr keine Dokumente mehr zugeordnet sind.
+        Dadurch wird sichergestellt, dass keine Dateien unbeabsichtigt verloren gehen.
+        Entferne oder verschiebe die Dokumente zuerst, um die Kategorie löschen zu können.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq7_q">Welche Dateiformate werden unterstützt?</h2>
+      <p data-i18n="faq7_a1">
+        MyDocuBox unterstützt eine Vielzahl gängiger Dateiformate:
+      </p>
+      <ul class="formats-list">
+        <li data-i18n="format1">PDF</li>
+        <li data-i18n="format2">Bilder: JPG, JPEG, PNG</li>
+        <li data-i18n="format3">Dokumente: DOC, DOCX, TXT</li>
+        <li data-i18n="format4">Präsentationen: PPT</li>
+        <li data-i18n="format5">Tabellen: Excel-Dateien</li>
+        <li data-i18n="format6">Videos: MP4</li>
+      </ul>
+      <p style="margin-top: 14px;" data-i18n="faq7_a2">
+        Nicht alle Dateitypen stehen für Funktionen wie OCR, Inhaltssuche oder Vorschau im selben Umfang zur Verfügung.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq8_q">Funktioniert MyDocuBox auch offline?</h2>
+      <p data-i18n="faq8_a">
+        Ja. Die Kernfunktionen von MyDocuBox sind auf lokale Nutzung ausgelegt.
+        Viele wichtige Funktionen wie Speichern, Organisieren und große Teile der Verarbeitung
+        funktionieren direkt auf deinem Gerät.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq9_q">Ist meine Daten wirklich privat?</h2>
+      <p data-i18n="faq9_a">
+        Ja. MyDocuBox wurde mit einem klaren Fokus auf Datenschutz entwickelt.
+        Deine Dokumente bleiben unter deiner Kontrolle und werden nicht für Werbung,
+        Profiling oder externe Analyse genutzt.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="faq10_q">Noch Fragen?</h2>
+      <p>
+        <span data-i18n="faq10_a">Schreib uns einfach an:</span>
+        <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 MyDocuBox –
+    <a class="support-mail" href="mailto:support@mydocubox.app">support@mydocubox.app</a>
+    <a href="privacy.html" data-i18n="footer_privacy">Datenschutzerklärung</a>
+    <a href="terms.html" data-i18n="footer_terms">Nutzungsbedingungen</a>
+    <a href="support.html" data-i18n="footer_support">Support</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+  </footer>
+
+  <script>
+    const translations = {
+      de: {
+        page_title: "MyDocuBox – Häufig gestellte Fragen",
+        meta_description: "Antworten auf häufig gestellte Fragen zu MyDocuBox – Speicherort, Suche, Erinnerungen, Datenschutz, Export und unterstützte Dateiformate.",
+        og_title: "MyDocuBox – FAQ",
+        og_description: "Alles Wichtige zu Speicherung, Suche, Erinnerungen, Sicherheit und unterstützten Dateiformaten in MyDocuBox.",
+
+        nav_home: "Startseite",
+        nav_features: "Funktionen",
+        nav_security: "Sicherheit",
+        nav_privacy: "Datenschutz",
+        nav_terms: "Nutzungsbedingungen",
+        nav_support: "Support",
+
+        hero_title: "Häufig gestellte Fragen",
+        hero_text: "Alles Wichtige zu Speicherung, Suche, Erinnerungen, Datenschutz, Dateiformaten und Export – kompakt erklärt.",
+
+        faq1_q: "Wo werden meine Dokumente gespeichert?",
+        faq1_a: "Standardmäßig werden alle Dokumente lokal auf deinem Gerät gespeichert. Du behältst jederzeit die Kontrolle über deine Daten. Optional kannst du iCloud aktivieren, um deine Dokumente auf deinen Apple-Geräten zu synchronisieren.",
+
+        faq2_q: "Wie finde ich meine Dokumente wieder?",
+        faq2_a: "MyDocuBox verfügt über eine leistungsstarke Suchfunktion. Du kannst nicht nur nach Dateinamen suchen, sondern auch Inhalte innerhalb deiner Dokumente schnell wiederfinden.",
+
+        faq3_q: "Gibt es eine Wiedervorlage oder Erinnerungsfunktion?",
+        faq3_a: "Ja. Du kannst für Dokumente individuelle Erinnerungen anlegen, damit du wichtige Fristen, Zahlungstermine oder Kündigungsdaten nicht verpasst.",
+
+        faq4_q: "Was bedeutet „Intelligente Offline-Erkennung“?",
+        faq4_a: "MyDocuBox analysiert Texte, Dateinamen und Kategorien direkt auf deinem Gerät. Die Verarbeitung erfolgt lokal, sodass deine privaten Dokumente nicht zur Analyse auf externe Server hochgeladen werden.",
+
+        faq5_q: "Kann ich meine Daten wieder exportieren?",
+        faq5_a: "Ja, selbstverständlich. Du kannst einzelne Dokumente oder mehrere Dateien gesammelt exportieren und deine Daten jederzeit sichern oder weiterverwenden.",
+
+        faq6_q: "Was passiert, wenn ich eine Kategorie lösche?",
+        faq6_a: "Eine Kategorie kann nur gelöscht werden, wenn ihr keine Dokumente mehr zugeordnet sind. Dadurch wird sichergestellt, dass keine Dateien unbeabsichtigt verloren gehen. Entferne oder verschiebe die Dokumente zuerst, um die Kategorie löschen zu können.",
+
+        faq7_q: "Welche Dateiformate werden unterstützt?",
+        faq7_a1: "MyDocuBox unterstützt eine Vielzahl gängiger Dateiformate:",
+        format1: "PDF",
+        format2: "Bilder: JPG, JPEG, PNG",
+        format3: "Dokumente: DOC, DOCX, TXT",
+        format4: "Präsentationen: PPT",
+        format5: "Tabellen: Excel-Dateien",
+        format6: "Videos: MP4",
+        faq7_a2: "Nicht alle Dateitypen stehen für Funktionen wie OCR, Inhaltssuche oder Vorschau im selben Umfang zur Verfügung.",
+
+        faq8_q: "Funktioniert MyDocuBox auch offline?",
+        faq8_a: "Ja. Die Kernfunktionen von MyDocuBox sind auf lokale Nutzung ausgelegt. Viele wichtige Funktionen wie Speichern, Organisieren und große Teile der Verarbeitung funktionieren direkt auf deinem Gerät.",
+
+        faq9_q: "Ist meine Daten wirklich privat?",
+        faq9_a: "Ja. MyDocuBox wurde mit einem klaren Fokus auf Datenschutz entwickelt. Deine Dokumente bleiben unter deiner Kontrolle und werden nicht für Werbung, Profiling oder externe Analyse genutzt.",
+
+        faq10_q: "Noch Fragen?",
+        faq10_a: "Schreib uns einfach an:",
+
+        footer_privacy: "Datenschutzerklärung",
+        footer_terms: "Nutzungsbedingungen",
+        footer_support: "Support",
+        footer_imprint: "Impressum"
+      },
+
+      en: {
+        page_title: "MyDocuBox – Frequently Asked Questions",
+        meta_description: "Answers to frequently asked questions about MyDocuBox – storage, search, reminders, privacy, export and supported file formats.",
+        og_title: "MyDocuBox – FAQ",
+        og_description: "Everything you need to know about storage, search, reminders, security and supported file formats in MyDocuBox.",
+
+        nav_home: "Home",
+        nav_features: "Features",
+        nav_security: "Security",
+        nav_privacy: "Privacy Policy",
+        nav_terms: "Terms of Use",
+        nav_support: "Support",
+
+        hero_title: "Frequently Asked Questions",
+        hero_text: "Everything important about storage, search, reminders, privacy, file formats and export – explained clearly.",
+
+        faq1_q: "Where are my documents stored?",
+        faq1_a: "By default, all documents are stored locally on your device. You stay in full control of your data at all times. Optionally, you can enable iCloud to sync your documents across your Apple devices.",
+
+        faq2_q: "How can I find my documents again?",
+        faq2_a: "MyDocuBox includes a powerful search function. You can search not only by file name, but also by content inside your documents.",
+
+        faq3_q: "Is there a reminder feature?",
+        faq3_a: "Yes. You can add individual reminders to documents so you do not miss important deadlines, payment dates or cancellation dates.",
+
+        faq4_q: "What does “Intelligent Offline Recognition” mean?",
+        faq4_a: "MyDocuBox analyzes text, file names and categories directly on your device. Processing happens locally, so your private documents are not uploaded to external servers for analysis.",
+
+        faq5_q: "Can I export my data again?",
+        faq5_a: "Yes, of course. You can export individual documents or multiple files together at any time to back up or reuse your data.",
+
+        faq6_q: "What happens if I delete a category?",
+        faq6_a: "A category can only be deleted if no documents are assigned to it. This helps prevent files from being lost unintentionally. Remove or move the documents first before deleting the category.",
+
+        faq7_q: "Which file formats are supported?",
+        faq7_a1: "MyDocuBox supports a wide range of common file formats:",
+        format1: "PDF",
+        format2: "Images: JPG, JPEG, PNG",
+        format3: "Documents: DOC, DOCX, TXT",
+        format4: "Presentations: PPT",
+        format5: "Spreadsheets: Excel files",
+        format6: "Videos: MP4",
+        faq7_a2: "Not all file types support features like OCR, content search or preview to the same extent.",
+
+        faq8_q: "Does MyDocuBox work offline?",
+        faq8_a: "Yes. The core features of MyDocuBox are designed for local use. Many important functions such as storing, organizing and major parts of processing work directly on your device.",
+
+        faq9_q: "Is my data really private?",
+        faq9_a: "Yes. MyDocuBox was built with a strong focus on privacy. Your documents remain under your control and are not used for advertising, profiling or external analysis.",
+
+        faq10_q: "Still have questions?",
+        faq10_a: "Just write to us at:",
+
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms of Use",
+        footer_support: "Support",
+        footer_imprint: "Imprint"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang] || translations.de;
+
+      document.documentElement.lang = lang;
+      document.title = t.page_title;
+
+      document.querySelector('meta[name="description"]').setAttribute("content", t.meta_description);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.og_title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.og_description);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    }
+
+    function setLang(lang) {
+      localStorage.setItem("mydocubox_lang", lang);
+      applyLang(lang);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const paramLang = params.get("lang");
+    const savedLang = localStorage.getItem("mydocubox_lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+    const initialLang = (paramLang === "de" || paramLang === "en") ? paramLang : (savedLang || browserLang);
+
+    applyLang(initialLang);
+  </script>
+</body>
+</html>
